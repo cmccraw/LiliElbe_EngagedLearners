@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-    <?xml-model href="../../Lili%20Elbe/lili-elbe-code/schema/out/LEDA_ODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../../../schema/out/LEDA_ODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
     rendition="lilielbe.org/context/Periodicals/1931-05-07ScherlMagazin.html"
     xml:base="https://gitlab.com/ctsdh/lili-elbe-code/blob/master/XSLT_sandbox/readingViews/input/periodicals/1931-05-07ScherlMagazin.xml">
@@ -7,9 +7,11 @@
         <fileDesc>
             <titleStmt>
                 <title>
-                    <hi rend="italics">EIN MENSCH WECHSELT SEIN GESCHLECHT</hi></title>
+                    <hi rend="italics">EIN MENSCH WECHSELT SEIN GESCHLECHT</hi>
+                </title>
                 <title type="alternative">
-                    <hi rend="italics">A PERSON CHANGES HIS SEX</hi></title>
+                    <hi rend="italics">A PERSON CHANGES HIS SEX</hi>
+                </title>
                 <respStmt>
                     <resp>Written by</resp>
                     <persName key="hoyerNiels" role="AUT">Niels Hoyer</persName>
@@ -22,6 +24,7 @@
                 <respStmt>
                     <resp>Translation reviewed by</resp>
                     <persName ref="sm">Sabine Meyer</persName>
+                    <persName ref="plc">Pamela Caughie</persName>
                 </respStmt>
                 <respStmt>
                     <resp>Transcription completed by</resp>
@@ -32,24 +35,13 @@
                     <persName ref="xeh">Xiamara Hohman</persName>
                 </respStmt>
                 <respStmt>
-                    <resp>Encoding assistance and/or XML proofing completed by</resp>
-                    <persName ref=""/>
-                </respStmt>
-                <respStmt>
                     <resp>XML transformed into HTML
                             <date><!-- exact transformation date yyyy-mm-dd --></date> by</resp>
                     <persName ref="rjp">Rebecca J. Parker</persName>
                 </respStmt>
                 <respStmt>
-                    <resp>HTML proofing completed by <persName ref="plc"/>Pamela Caughie</resp>
-                </respStmt>
-                <respStmt>
-                    <resp>Images prepared by</resp>
-                    <persName ref=""/>
-                </respStmt>
-                <respStmt>
-                    <resp>Illustrations prepared by</resp>
-                    <persName ref=""/>
+                    <resp>HTML proofing completed by</resp>
+                    <persName ref="plc">Pamela Caughie</persName>
                 </respStmt>
                 <sponsor>Loyola University Chicago Libraries</sponsor>
                 <sponsor>Loyola's Center for Textual Studies and Digital Humanities</sponsor>
@@ -59,60 +51,62 @@
                 <pubPlace>Chicago, IL, USA</pubPlace>
                 <date when="2019-07-06">July 6th, 2019</date>
                 <availability>
-                    <p>
-                        <orgName select="source" key="EHA">Ernst Harthern Archives, Arbetarrörelsens
-                            Arkiv och Bibliotek (Swedish Labour Movement's Archives and
-                            Library)</orgName>.</p>
-                    <!--not sure about this for this source-->
+                    <p>Reproduced by courtesy of the <orgName select="source">Ernst Harthern
+                            Archives, Arbetarrörelsens Arkiv och Bibliotek (Swedish Labour
+                            Movement's Archives and Library)</orgName> in <placeName>Huddinge,
+                            Sweden</placeName>.</p>
+
                     <licence>Distributed under a Creative Commons
                         Attribution-NonCommercial-ShareAlike 4.0 International license.</licence>
                 </availability>
             </publicationStmt>
-            <sourceDesc source="ScherlMagazin" xml:lang="ger-B">
-                <p>An eight-page article that was typed and printed in Scherl Magazin on 7 May 1931.
-                    The article also includes eight illustrations.</p>
+            <sourceDesc source="Manuscript" xml:lang="ger-B">
+                <p>An 8-page printed article, two columns on each page, with photographs from the German edition throughout. The first page contains signatures of both Einar Wegener and Lili Elbe and attributes authorship to Niels Hoyer.</p>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
             <classDecl>
                 <taxonomy source="https://arc-staging.dh.tamu.edu/index.php/Submitting_RDF">
                     <category source="collex" xml:id="discipline">
-                        <!--not sure about these-->
                         <catDesc>History/Gender Studies</catDesc>
                     </category>
                     <category source="collex" xml:id="genre">
                         <catDesc>Essay/Nonfiction</catDesc>
                     </category>
+                    <category source="collex" xml:id="image">
+                        <catDesc>http://lilielbe.org/media/periodicals/1931-05-07ScherlMagazin_01.jpg</catDesc>
+                        <catDesc>http://lilielbe.org/media/periodicals/1931-05-07ScherlMagazin_02.jpg</catDesc>
+                        <catDesc>http://lilielbe.org/media/periodicals/1931-05-07ScherlMagazin_03.jpg</catDesc>
+                        <catDesc>http://lilielbe.org/media/periodicals/1931-05-07ScherlMagazin_04.jpg</catDesc>
+                        <catDesc>http://lilielbe.org/media/periodicals/1931-05-07ScherlMagazin_05.jpg</catDesc>
+                        <catDesc>http://lilielbe.org/media/periodicals/1931-05-07ScherlMagazin_06.jpg</catDesc>
+                        <catDesc>http://lilielbe.org/media/periodicals/1931-05-07ScherlMagazin_07.jpg</catDesc>
+                        <catDesc>http://lilielbe.org/media/periodicals/1931-05-07ScherlMagazin_08.jpg</catDesc>
+                    </category>
                     <category source="collex" xml:id="text">
-                        <catDesc><!--don't know what to put here--></catDesc>
+                        <catDesc>https://gitlab.com/ctsdh/lili-elbe-code/raw/master/XSLT_sandbox/plainText/output/1931-05-07SherlMagazin.txt</catDesc>
                     </category>
                     <category source="dc" xml:id="date">
                         <catDesc>1931</catDesc>
                     </category>
-                    <category source="dc" xml:id="relation">
-                        <catDesc source="trans"><!--don't know what to put here-->
-                        </catDesc>
+                    <category source="dcterms" xml:id="isPartOf" xml:lang="gerB">
+                        <catDesc>Originally published in Scherl Magazin (1931-05-07).</catDesc>
                     </category>
-                    <category xml:id="OCR"/>
                 </taxonomy>
             </classDecl>
             <editorialDecl>
-                <p>In our encoding we have moved each chapter's first page number, originally
-                    appearing at the bottom of the print page, to the beginning of the page's text
-                    before the chapter heading. The pb element in the TEI stands for page beginning
-                    and throughout the rest of the document page numbers appear at the beginning of
-                    the page; therefore, in order to simplify our processing we have altered the
-                    placement of each chapter's first page's number.</p>
-                <p>When paragraphs line up between the two columns, we have not repeated translator
-                    and editor notes. When the paragraphs do not line up, we have included editor
-                    notes in both places. We have prioritized readability. Page breaks may not be
-                    consistent between the translation and the transcription due to word order
-                    differences in the translations. </p>
                 <hyphenation>
                     <p>We have removed the hyphenation that appears in the printed text during
-                        digitization and encoding. Original hyphenation can be consulted in the
-                        facsimile images.</p>
+                        digitization and encoding. Original hyphenation can be consulted in the facsimile
+                        images.</p>
                 </hyphenation>
+                <segmentation>
+                    <p>When paragraphs line up between the two columns, we have not repeated translator
+                        and editor notes. When the paragraphs do not line up, we have included editor
+                        notes in both places. We have prioritized readability. Page breaks may not be
+                        consistent between the translation and the transcription due to word order
+                        differences in the translations.</p>
+                </segmentation>
             </editorialDecl>
         </encodingDesc>
     </teiHeader>
@@ -120,178 +114,265 @@
         <body>
             <div type="original">
                 <div rend="head" style="periodical">
-                    <head><title>EIN MENSCH WECHSELT SEIN GESCHLECHT</title></head>
-                </div>
-                <div rend="headlines">
-                    <list>
-                        <item rend="primary">[Signatures: <persName key="wegenerE">Einar Wegener</persName>. <persName key="lili">Lili Elbe</persName>.]<!--how to encode this?--> Von <persName key="hoyerNiels">Niels
-                                Hoyer</persName></item>
-                        <!--additional <item> elements with no @rend attribute value can be used to list sub-headlines-->
-                    </list>
+                    <head>
+                        <title>EIN MENSCH WECHSELT SEIN GESCHLECHT</title>
+                    </head>
+
+                    <div rend="headlines">
+                        <list>
+                            <item rend="primary">[Signatures: <persName key="wegenerE">Einar
+                                    Wegener</persName>. <persName key="lili">Lili Elbe</persName>.]
+                                Von <persName key="hoyerNiels">Niels Hoyer</persName></item>
+                            <!--additional <item> elements with no @rend attribute value can be used to list sub-headlines-->
+                        </list>
+                    </div>
                 </div>
                 <div rend="body">
-                    <pb style="page"
-                    n="439"
-                    facs="http://lilielbe.org/media/periodicals/1931-05-07ScherlMagazin_01.jpg"/>
+                    <pb style="page" n="439"
+                        facs="http://lilielbe.org/media/periodicals/1931-05-07ScherlMagazin_01.jpg"/>
 
-                    <p>Als kürzlich eine der größten Zeitungen <placeName key="copenhagen">Kopenhagen</placeName>s berichtete, daß die Ehe
-                        des über <placeName key="denmark">Dänemark</placeName>s Grenzen hinaus bekannten Künstlerpaares <persName key="wegenerE">Einar</persName> and <persName key="wegenerG">Gerda Wegener</persName> von den dänischen Behörden für ungültig erklärt worden sei, eine
-                        Ehe, die über 20 Jahre gedauert hat und hervorgegangen ist aus einer
-                        Jugendliebe "auf den ersten Blick", da hielten die "Uneingeweihten" den Atem
-                        an. Sensation umwehte diese Mitteilung. Und das Getuschel begann, zumal
-                        <persName key="wegenerG">Gerda Wegener</persName>, die in <placeName key="copenhagen">Kopenhagen</placeName> gerade eine Ausstellung ihrer neuesten
-                        Bildwerke und vieler Bilde <persName key="wegenerE">Einar Wegener</persName>s veranstaltete, noch erklärte, daß
-                        <persName key="wegenerE">Einar</persName> jetzt zum allerletzten Male ausstelle . . . </p>
-                    <p>Bald darauf erfuhren auch die "Uneingeweihten" die Ursache von beidem—und zwar
-                        aus dem Munde von <persName key="lili">Lili Elbe</persName>, einer jungen Dame, deren Namen bislang noch
-                        niemand gehört hatte. Man sah sie in Begleitung von <persName key="wegenerG">Gerda Wegener</persName>. Unerkannt
-                        ging sie mit ihr durch <persName key="wegenerG">Frau Gerda</persName>s Ausstellung. Sie grüßte
-                        [Two pictures: <persName key="wegenerE">Einar Wegener</persName> als Maler in <placeName key="paris">Paris</placeName> . . . Jetzt <persName key="lili">Fräulein Lili Elbe</persName> (<placeName key="copenhagen">Kopenhagen</placeName>, February 1931)]
-                        <pb style="page"
-                            n="440"
-                            facs="http://lilielbe.org/media/periodicals/1931-05-07ScherlMagazin_02.jpg"/>
-                        da und dort ein ihr bekanntes Gesicht, and
-                        ihr Gruß begegnete erstaunten Augen.</p>
-                    <p>Seit mehreren Jahren hatten <persName key="wegenerG">Gerda</persName> und <persName key="wegenerE">Einar Wegener</persName> in <placeName key="paris">Paris</placeName> gelebt und
-                        gemalt. Als sie heirateten, war sie 17 und er 19 Jahre alt . . . In <placeName key="paris">Paris</placeName>
+                    <p>Als kürzlich eine der größten Zeitungen <placeName key="copenhagen"
+                            >Kopenhagen</placeName>s berichtete, daß die Ehe des über <placeName
+                            key="denmark">Dänemark</placeName>s Grenzen hinaus bekannten
+                        Künstlerpaares <persName key="wegenerE">Einar</persName> and <persName
+                            key="wegenerG">Gerda Wegener</persName> von den dänischen Behörden für
+                        ungültig erklärt worden sei, eine Ehe, die über 20 Jahre gedauert hat und
+                        hervorgegangen ist aus einer Jugendliebe "auf den ersten Blick", da hielten
+                        die "Uneingeweihten" den Atem an. Sensation umwehte diese Mitteilung. Und
+                        das Getuschel begann, zumal <persName key="wegenerG">Gerda
+                            Wegener</persName>, die in <placeName key="copenhagen"
+                            >Kopenhagen</placeName> gerade eine Ausstellung ihrer neuesten Bildwerke
+                        und vieler Bilde <persName key="wegenerE">Einar Wegener</persName>s
+                        veranstaltete, noch erklärte, daß <persName key="wegenerE">Einar</persName>
+                        jetzt zum allerletzten Male ausstelle . . . </p>
+                    <p>Bald darauf erfuhren auch die "Uneingeweihten" die Ursache von beidem—und
+                        zwar aus dem Munde von <persName key="lili">Lili Elbe</persName>, einer
+                        jungen Dame, deren Namen bislang noch niemand gehört hatte. Man sah sie in
+                        Begleitung von <persName key="wegenerG">Gerda Wegener</persName>. Unerkannt
+                        ging sie mit ihr durch <persName key="wegenerG">Frau Gerda</persName>s
+                        Ausstellung. Sie grüßte <figure
+                            facs="http://www.lilielbe.org/media/periodicals/1931-05-07ScherlMagazin_09.jpg">
+                            <figDesc><hi rend="bold"><persName key="wegenerE">Einar
+                                        Wegener</persName> als Maler in <placeName key="paris"
+                                        >Paris</placeName></hi></figDesc>
+                        </figure>
+                        <figure
+                            facs="http://www.lilielbe.org/media/periodicals/1931-05-07ScherlMagazin_10.jpg">
+                            <figDesc><hi rend="bold">. . . Jetzt <persName key="lili">Fräulein Lili
+                                        Elbe</persName> (<placeName key="copenhagen"
+                                        >Kopenhagen</placeName>, February 1931)</hi></figDesc>
+                        </figure><pb style="page" n="440"
+                            facs="http://lilielbe.org/media/periodicals/1931-05-07ScherlMagazin_02.jpg"
+                        /> da und dort ein ihr bekanntes Gesicht, and ihr Gruß begegnete erstaunten
+                        Augen.</p>
+                    <p>Seit mehreren Jahren hatten <persName key="wegenerG">Gerda</persName> und
+                            <persName key="wegenerE">Einar Wegener</persName> in <placeName
+                            key="paris">Paris</placeName> gelebt und gemalt. Als sie heirateten, war
+                        sie 17 und er 19 Jahre alt . . . In <placeName key="paris">Paris</placeName>
                         hatten sie es zu Ansehen gebracht. Beide stellten seit Jahren in den ersten
-                        Salons von <placeName key="paris">Paris</placeName> aus, beide besaßen die "Goldenen Palmen" der <placeName key="academyArt">Akademie</placeName>. Von
-                        <persName key="wegenerG">Frau Gerda</persName> hängt sogar im <placeName key="luxembourgMuseum"><placeName key="luxembourg">Luxembourg</placeName>-Museum</placeName> im <placeName key="paris">Paris</placeName> ein Porträt. –</p>
-                    <p>"Weshalb", fragte ich <persName key="wegenerG">Frau Gerda</persName>, "will <persName key="wegenerE">Einar</persName> nicht mehr malen?"</p>
-                    <p>"Das mag <persName key="lili">Lili Elbe</persName> Ihnen erzählen", antwortete die Gefragte still und
-                        ein-fach . . .</p>
+                        Salons von <placeName key="paris">Paris</placeName> aus, beide besaßen die
+                        "Goldenen Palmen" der <placeName key="academyArt">Akademie</placeName>. Von
+                            <persName key="wegenerG">Frau Gerda</persName> hängt sogar im <placeName
+                            key="luxembourgMuseum"><placeName key="luxembourg"
+                                >Luxembourg</placeName>-Museum</placeName> im <placeName key="paris"
+                            >Paris</placeName> ein Porträt. –</p>
+                    <p>"Weshalb", fragte ich <persName key="wegenerG">Frau Gerda</persName>, "will
+                            <persName key="wegenerE">Einar</persName> nicht mehr malen?"</p>
+                    <p>"Das mag <persName key="lili">Lili Elbe</persName> Ihnen erzählen",
+                        antwortete die Gefragte still und ein-fach . . .</p>
                     <p>"Ja, das will ich gern, denn ich halte es für meine Pflicht, über den Maler
-                        <persName key="wegenerE">Einar Wegener</persName>, der nicht mehr ist, die Wahrheit zu erzählen . ."</p>
-                    <p>"<persName key="wegenerE">Einar</persName> ist doch nicht tot?" fragte ich entsetzt.</p>
+                            <persName key="wegenerE">Einar Wegener</persName>, der nicht mehr ist,
+                        die Wahrheit zu erzählen . ."</p>
+                    <p>"<persName key="wegenerE">Einar</persName> ist doch nicht tot?" fragte ich
+                        entsetzt.</p>
                     <p>"Nein, das ist er nicht, aber er existiert auch nicht mehr. Er hat sich
                         freiwillig ausgelöscht, um Platz für ein anderes Wesen zu machen, das, wie
                         er meinte, größeres Daseinsrecht hat als er selber, und dieses andere Wesen
                         — bin ich. Ja, ich weiß, daß Sie und vielleicht viele mit Ihnen es schwer
-                        verstehen werden. Aber mein Leben hat sich so ganz anders gestaltet, daß
-                        ich in Wirklichkeit nicht mehr mein früheres Leben lebe, sondern ein Dasein
-                        abgeschlossen habe und jetzt den Anfang einer neuen Daseinsform mache. [Picture: Eine Porzellanskulptur <persName key="wegenerE">Einar Wegener</persName>s] Ich will versuchen, es Ihnen zu erklären."</p>
-                    <p><persName key="lili">Fräulein Lili</persName> lehnt sich in einen tiefen Sessel zurück und setzt ihre hohen
-                        Stöckelschuhe auf einen Schemel. Es kommt ein träumerischer Ausdruck in
-                        ihre großen, dunklen Augen. Sie erzählt von einem kleinen Kinde, das, in dem
-                        jütländischen Städtchen <placeName key="vejle">Vejle</placeName> einst geboren, vom <persName>Pastor</persName> und <persName>der Hebamme</persName>
-                        für einen Knaben erklärt und als <persName key="wegenerE">Einar Wegener</persName> in das Kirchenbuch
-                        eingetragen wurde. Es war ein sehr schönes Kind, und da <persName key="wegenerAM"><persName key="wegenerE">Einar</persName>s Muttter</persName> den
-                        Jungen gern hübsch aufputzte, gab es schon damals viele, die glaubten, er sei ein kleines Mädchen.</p>
-                    <p><persName key="wegenerE">Einar</persName> selber fühlte sich als Knabe, wenn er mit seinen Brüdern spielte, aber
-                        sein größtes Vergnügen war, mit dem Puppenwagen der Schwestern
-                        herumzufahren, doch nur, wenn niemand es sah. Aber während das Bübchen
-                        heranwuchs, fühlte es ganz fern manchmal, daß er nicht so ganz war wie die
-                        anderen. Doch solch Gedanken verwehten in dem Kna-benhirn unter einer
-                        allmählich immer stärker werdenden Begeisterung für Kunst und Literatur.
-                        Künstler wollte der Jüngling werden. Er kam nach <placeName key="copenhagen">Kopenhagen</placeName> und bald auf
-                        <placeName key="academyArt">die Kunstakademie</placeName>.</p>
-                    <p>Hier begegnete er einem jungen Mädchen, das <persName key="wegenerG">Gerda</persName> hieß und auch die Kunst
-                        zum Beruf gewählt hatte. Es war eine Liebe auf den ersten Blick. Beide waren
-                        noch sehr jung—so erzählt <persName key="lili">Fräulein Lili</persName>—als sie heirateten, vielleicht noch
-                        so jung, daß sie gar nicht recht wußten, was sie taten, aber sie haben
-                        diesen Schritt später nie bereut. Dieser Bund, den alle anderen stets für
-                        eine Ehe ansahen, war auf gegenseitiges Verstehen, unverbrüchliche
+                        verstehen werden. Aber mein Leben hat sich so ganz anders gestaltet, daß ich
+                        in Wirklichkeit nicht mehr mein früheres Leben lebe, sondern ein Dasein
+                        abgeschlossen habe und jetzt den Anfang einer neuen Daseinsform mache.
+                            <figure
+                            facs="http://www.lilielbe.org/media/periodicals/1931-05-07ScherlMagazin_14.jpg">
+                            <figDesc><hi rend="bold">Eine Porzellanskulptur <persName key="wegenerE"
+                                        >Einar Wegener</persName>s</hi></figDesc>
+                        </figure> Ich will versuchen, es Ihnen zu erklären."</p>
+                    <p><persName key="lili">Fräulein Lili</persName> lehnt sich in einen tiefen
+                        Sessel zurück und setzt ihre hohen Stöckelschuhe auf einen Schemel. Es kommt
+                        ein träumerischer Ausdruck in ihre großen, dunklen Augen. Sie erzählt von
+                        einem kleinen Kinde, das, in dem jütländischen Städtchen <placeName
+                            key="vejle">Vejle</placeName> einst geboren, vom
+                            <persName>Pastor</persName> und <persName>der Hebamme</persName> für
+                        einen Knaben erklärt und als <persName key="wegenerE">Einar
+                            Wegener</persName> in das Kirchenbuch eingetragen wurde. Es war ein sehr
+                        schönes Kind, und da <persName key="wegenerAM"><persName key="wegenerE"
+                                >Einar</persName>s Muttter</persName> den Jungen gern hübsch
+                        aufputzte, gab es schon damals viele, die glaubten, er sei ein kleines
+                        Mädchen.</p>
+                    <p><persName key="wegenerE">Einar</persName> selber fühlte sich als Knabe, wenn
+                        er mit seinen Brüdern spielte, aber sein größtes Vergnügen war, mit dem
+                        Puppenwagen der Schwestern herumzufahren, doch nur, wenn niemand es sah.
+                        Aber während das Bübchen heranwuchs, fühlte es ganz fern manchmal, daß er
+                        nicht so ganz war wie die anderen. Doch solch Gedanken verwehten in dem
+                        Kna-benhirn unter einer allmählich immer stärker werdenden Begeisterung für
+                        Kunst und Literatur. Künstler wollte der Jüngling werden. Er kam nach
+                            <placeName key="copenhagen">Kopenhagen</placeName> und bald auf
+                            <placeName key="academyArt">die Kunstakademie</placeName>.</p>
+                    <p>Hier begegnete er einem jungen Mädchen, das <persName key="wegenerG"
+                            >Gerda</persName> hieß und auch die Kunst zum Beruf gewählt hatte. Es
+                        war eine Liebe auf den ersten Blick. Beide waren noch sehr jung—so erzählt
+                            <persName key="lili">Fräulein Lili</persName>—als sie heirateten,
+                        vielleicht noch so jung, daß sie gar nicht recht wußten, was sie taten, aber
+                        sie haben diesen Schritt später nie bereut. Dieser Bund, den alle anderen
+                        stets für eine Ehe ansahen, war auf gegenseitiges Verstehen, unverbrüchliche
                         Freundschaft, inneres Vertrauen und Kameradschaftsgefühl in der Arbeit
                         aufgebaut. Deshalb haden sie einander nie im Stiche gelassen, und deshalb
                         werden sie auch zukünftig einander nahestehen wie zwei wahre Freundinnen,
                         die einander das Beste wünschen und alles tun wollen, um einander zu
                         helfen.</p>
-                    <p>Und <persName key="lili">Fräulein Lili</persName> erzählt weiter: "<persName key="wegenerG">Gerda Wegener</persName> benutzte ihren Mann <persName key="wegenerE">Einar</persName>
-                        oft als Modell, und zwar fast stets für weibliche Akte, und durch <persName key="wegenerG">Gerda</persName>s
-                        künstlerischen<pb style="page"
-                        n="441"
-                        facs="http://lilielbe.org/media/periodicals/1931-05-07ScherlMagazin_03.jpg"/>
-                        Instinkt geschah es, daß in <persName key="wegenerE">Einar</persName>s Wesen allmählich das weibliche Element
-                        immer stärker betont wurde, daß er nach und nach zu der richtigen Erkenntnis
-                        seines wahren Ichs kam . . . Und jetzt began eine Reihe von Jahren, die so
-                        angefüllt waren mit Leiden, daß ich am liebsten nicht mehr daran denken
-                        möchte. <persName key="wegenerE">Einar Wegener</persName> fühlte sich wie jemand, der gezwungen ist, in einem
-                        fremden Gewand herumzugehen, das ihn beengt, in dem er sich lächerlich
+                    <p>Und <persName key="lili">Fräulein Lili</persName> erzählt weiter: "<persName
+                            key="wegenerG">Gerda Wegener</persName> benutzte ihren Mann <persName
+                            key="wegenerE">Einar</persName> oft als Modell, und zwar fast stets für
+                        weibliche Akte, und durch <persName key="wegenerG">Gerda</persName>s
+                            künstlerischen<pb style="page" n="441"
+                            facs="http://lilielbe.org/media/periodicals/1931-05-07ScherlMagazin_03.jpg"
+                        /> Instinkt geschah es, daß in <persName key="wegenerE">Einar</persName>s
+                        Wesen allmählich das weibliche Element immer stärker betont wurde, daß er
+                        nach und nach zu der richtigen Erkenntnis seines wahren Ichs kam . . . Und
+                        jetzt began eine Reihe von Jahren, die so angefüllt waren mit Leiden, daß
+                        ich am liebsten nicht mehr daran denken möchte. <persName key="wegenerE"
+                            >Einar Wegener</persName> fühlte sich wie jemand, der gezwungen ist, in
+                        einem fremden Gewand herumzugehen, das ihn beengt, in dem er sich lächerlich
                         vorkommt. Zu den psychischen Leiden kamen noch körperliche. Vergeblich
-                        suchte er in <placeName key="paris">Paris</placeName> bei französischen Ärzten Hilfe. Keiner wollte ihm
-                        glauben. Sie hielten ihn für hysterisch und behandelten ihn mit
-                        Röntgenstrahlen, die mir, wie sich später herausstellte, mehr Schaden als
-                        Nutzen brachten."</p>
-                    <p>"Durch einen Zufall", fährt <persName key="lili">Fräulein Lili</persName> fort, "kam ich, als ich bereits alle
-                        Hoffnungen aufgegeben hatte, jemals wieder ein normal fühlender und
-                        denkender Mensch zu werden, in Verbindung mit einem hervorragenden
-                        deutschen Gynäkologen, <persName key="warnekros">Professor Dr. K. v. W.</persName>, dem Leiter <placeName key="womensClinic">der Staatlichen Frauenklinik</placeName> in <placeName key="dresden">Dresden</placeName>. Er untersuchte mich und stellte fest, daß ich nicht
-                        ein Mann, sondern in weit überwiegendem Grade eine Frau war. Das Ergebnis
-                        war, daß ich auf seine Aufforderung hin zuerst zwecks Untersuchungen zu
-                        zwei Berliner Spezialisten und dann nach <placeName key="dresden">Dresden</placeName> fuhr, wo er in seiner
-                        <placeName key="womensClinic">Klinik</placeName> mehrere schwere Operationen an mir vornahm. Es waren übrigens die
-                        ersten dieser Art, die er jemals ausge-führt hatte . . .</p>
+                        suchte er in <placeName key="paris">Paris</placeName> bei französischen
+                        Ärzten Hilfe. Keiner wollte ihm glauben. Sie hielten ihn für hysterisch und
+                        behandelten ihn mit Röntgenstrahlen, die mir, wie sich später herausstellte,
+                        mehr Schaden als Nutzen brachten."</p>
+                    <p>"Durch einen Zufall", fährt <persName key="lili">Fräulein Lili</persName>
+                        fort, "kam ich, als ich bereits alle Hoffnungen aufgegeben hatte, jemals
+                        wieder ein normal fühlender und denkender Mensch zu werden, in Verbindung
+                        mit einem hervorragenden deutschen Gynäkologen, <persName key="warnekros"
+                            >Professor Dr. K. v. W.</persName>, dem Leiter <placeName
+                            key="womensClinic">der Staatlichen Frauenklinik</placeName> in
+                            <placeName key="dresden">Dresden</placeName>. Er untersuchte mich und
+                        stellte fest, daß ich nicht ein Mann, sondern in weit überwiegendem Grade
+                        eine Frau war. Das Ergebnis war, daß ich auf seine Aufforderung hin zuerst
+                        zwecks Untersuchungen zu zwei Berliner Spezialisten und dann nach <placeName
+                            key="dresden">Dresden</placeName> fuhr, wo er in seiner <placeName
+                            key="womensClinic">Klinik</placeName> mehrere schwere Operationen an mir
+                        vornahm. Es waren übrigens die ersten dieser Art, die er jemals ausge-führt
+                        hatte . . .</p>
                     <p>Es war ein Leiden viele Monate lang. Oft war ich dem Tode nahe. Aber die
-                        Wissenschaft und meine eigene Nature siegten. <persName key="wegenerE">Einar Wegener</persName> war in <placeName key="womensClinic">die Klinik</placeName> gekommen, und die Frau, mit der Sie jetzt sprechen, die sich <persName key="lili">Lili Elbe</persName> nennt, verließ <placeName key="womensClinic">die Klinik</placeName>."</p>
+                        Wissenschaft und meine eigene Nature siegten. <persName key="wegenerE">Einar
+                            Wegener</persName> war in <placeName key="womensClinic">die
+                            Klinik</placeName> gekommen, und die Frau, mit der Sie jetzt sprechen,
+                        die sich <persName key="lili">Lili Elbe</persName> nennt, verließ <placeName
+                            key="womensClinic">die Klinik</placeName>."</p>
                     <p>"Und sind Sie jetzt glücklich?" fragte ich sie.</p>
                     <p>"Ja, das bin ich. Ich bin so glücklich, wie man es nur werden kann, wenn man
                         von Lebensumständen erlöst wird, die einem aufgezwungen sind, wie man es nur
-                        sein kann, wenn man sich in Übereinstimmung [Picture: <persName key="wegenerE">Einar Wegener</persName> vor etwa 12 Jahren Nach einer Zeidnung von <persName key="kohlL">Louis Kohl</persName>] mit sich selber fühlt . . .
-                        Das ist es gerade, was ich gern klarmachen möchte: <persName key="wegenerE">Einar Wegener</persName> ist nicht
-                        mehr, und deshalb kann er auch nicht mehr malen — nicht etwa, weil er an
-                        seiner Kunst verzweifelte, gibt er sie auf."</p>
+                        sein kann, wenn man sich in Übereinstimmung <figure
+                            facs="http://www.lilielbe.org/media/periodicals/1931-05-07ScherlMagazin_13.jpg">
+                            <figDesc><hi rend="bold"><persName key="wegenerE">Einar
+                                        Wegener</persName> vor etwa 12 Jahren Nach einer Zeidnung
+                                    von <persName key="kohlL">Louis Kohl</persName></hi></figDesc>
+                        </figure> mit sich selber fühlt . . . Das ist es gerade, was ich gern
+                        klarmachen möchte: <persName key="wegenerE">Einar Wegener</persName> ist
+                        nicht mehr, und deshalb kann er auch nicht mehr malen — nicht etwa, weil er
+                        an seiner Kunst verzweifelte, gibt er sie auf."</p>
                     <p>"Aber können Sie den nicht malen?"</p>
                     <p>"Das weiß ich nicht. Ich habe es noch nicht versucht, und ich fühle keinen
                         Drang danach. Bedenken Sie doch, für mich ist das Leben noch so neu, ich muß
                         mich erst im Dasein zurechtfinden . . . Und selbst wenn ich versuchen sollte
                         zu malen, so ist meine ganze Einstellung, meine ganze Lebensanschauung so
-                        verschieden von der <persName key="wegenerE">Einar</persName>s, daß es niemals eine Fortsetzung seiner Arbeit
-                        werden könnte. Er war so ausgeprägt männlich in seiner ganzen Malweise . . .
-                        Nein, dies hier ist und bleibt <persName key="wegenerE">Einar Wegener</persName>s letzte Ausstellung."</p>
+                        verschieden von der <persName key="wegenerE">Einar</persName>s, daß es
+                        niemals eine Fortsetzung seiner Arbeit werden könnte. Er war so ausgeprägt
+                        männlich in seiner ganzen Malweise . . . Nein, dies hier ist und bleibt
+                            <persName key="wegenerE">Einar Wegener</persName>s letzte
+                        Ausstellung."</p>
                     <p>"Glauben Sie denn, daß Sie die Kunst völlig entbehren können?"</p>
                     <p>"Nein, aber es ist möglich, daß sich mein künstlerischer Trieb in ganz
-                        anderen [Picture: Ein Gemälde <persName key="wegenerG">Gerda Wegener</persName>s: Drei Frauen
-                        Für die mittlere diente der Künstlerin ihr Gatte <persName key="wegenerE">Einar</persName> als Modell, in der Frau rechts stellte sie sich selbst dar]
-                        <pb style="page"
-                        n="442"
-                        facs="http://lilielbe.org/media/periodicals/1931-05-07ScherlMagazin_04.jpg"/>
-                        Formen auslösen könnte . . . vielleicht Music . . . was
-                        weiß ich? . . . Das Leben kommt mir noch so neu vor, und vorläufig genieße
-                        ich es, mich weiblichen Beschäftigungen hingeben zu können. Ich nähe so
-                        gern und liebe es, Lampenschirme zu machen . . .</p>
-                    <p>Diesman bin ich nur der Ausstellung wegen nach <placeName key="copenhagen">Kopenhagen</placeName> gekommen, aber ich
-                        war schon vor kurzem einmal wieder hier. <persName key="wegenerG">Gerda</persName> und ich mußten ja nach
-                        <placeName key="denmark">Dänemark</placeName>, um mir eine neue Identität zu verschaffen, und weil das Verhältnis
-                        zwischen <persName key="wegenerG">Gerda</persName> und mir, rein gesetzmäßig gesehen, in Ordnung gebracht werden
-                        mußte. Ich hatte die notwendigen Gutachten <persName key="warnekros">des Dresdener Arztes</persName> bei mir,
-                        und dank seiner Autoritäat und dem Verständnis der dänischen Behörden gelang
-                        es mir, dis gerichtlichen Formalitäten verhältnismäßig schnell zu ordnen.
-                        Mein Geschlecht wurde im Kirchenbuch geändert, und ich bekam das Recht zu
-                        meinem neuen Namen . . ."</p>
+                        anderen <pb style="page" n="442"
+                            facs="http://lilielbe.org/media/periodicals/1931-05-07ScherlMagazin_04.jpg"/>
+                        <figure
+                            facs="http://www.lilielbe.org/media/periodicals/1931-05-07ScherlMagazin_15.jpg">
+                            <figDesc><hi rend="bold">Ein Gemälde <persName key="wegenerG">Gerda
+                                        Wegener</persName>s: Drei Frauen Für die mittlere diente der
+                                    Künstlerin ihr Gatte <persName key="wegenerE">Einar</persName>
+                                    als Modell, in der Frau rechts stellte sie sich selbst
+                                dar</hi></figDesc>
+                        </figure> Formen auslösen könnte . . . vielleicht Music . . . was weiß ich?
+                        . . . Das Leben kommt mir noch so neu vor, und vorläufig genieße ich es,
+                        mich weiblichen Beschäftigungen hingeben zu können. Ich nähe so gern und
+                        liebe es, Lampenschirme zu machen . . .</p>
+                    <p>Diesman bin ich nur der Ausstellung wegen nach <placeName key="copenhagen"
+                            >Kopenhagen</placeName> gekommen, aber ich war schon vor kurzem einmal
+                        wieder hier. <persName key="wegenerG">Gerda</persName> und ich mußten ja
+                        nach <placeName key="denmark">Dänemark</placeName>, um mir eine neue
+                        Identität zu verschaffen, und weil das Verhältnis zwischen <persName
+                            key="wegenerG">Gerda</persName> und mir, rein gesetzmäßig gesehen, in
+                        Ordnung gebracht werden mußte. Ich hatte die notwendigen Gutachten <persName
+                            key="warnekros">des Dresdener Arztes</persName> bei mir, und dank seiner
+                        Autoritäat und dem Verständnis der dänischen Behörden gelang es mir, dis
+                        gerichtlichen Formalitäten verhältnismäßig schnell zu ordnen. Mein
+                        Geschlecht wurde im Kirchenbuch geändert, und ich bekam das Recht zu meinem
+                        neuen Namen . . ."</p>
                     <p>"Wurden Sie auch geschieden?"</p>
-                    <p>"Nein, den die Ehe zwichen <persName key="wegenerE">Einar</persName> und <persName key="wegenerG">Gerda Wegener</persName> wurde durch Gerichtsurteil
-                        für ungültig erklärt. Sie sind also nicht geschieden—sie waren neimals
-                        verheiratet."</p>
+                    <p>"Nein, den die Ehe zwichen <persName key="wegenerE">Einar</persName> und
+                            <persName key="wegenerG">Gerda Wegener</persName> wurde durch
+                        Gerichtsurteil für ungültig erklärt. Sie sind also nicht geschieden—sie
+                        waren neimals verheiratet."</p>
                     <p>"Und was sind Ihre zukünftigen Pläne?"</p>
-                    <p>"<persName key="wegenerG">Gerda</persName> fährt demnächst nach <placeName key="morocco">Marokko</placeName>, wo sie sich studienhalber lägere Zeit
-                        aufhalten wird. Ich gehe nach <placeName key="paris">Paris</placeName>, um verschiedenes zu ordnen, und
-                        besuche sie sicher dann in <placeName key="morocco">Marokko</placeName>, wo ich noch nie war . . . Was ich dann
-                        tue — ja, das wird die Zeit lehren, vorläufig bin ich nur froh, so sein zu
-                        dürfen, wie ich bin", schließt <persName key="lili">Lili Elbe</persName>.</p>
+                    <p>"<persName key="wegenerG">Gerda</persName> fährt demnächst nach <placeName
+                            key="morocco">Marokko</placeName>, wo sie sich studienhalber lägere Zeit
+                        aufhalten wird. Ich gehe nach <placeName key="paris">Paris</placeName>, um
+                        verschiedenes zu ordnen, und besuche sie sicher dann in <placeName
+                            key="morocco">Marokko</placeName>, wo ich noch nie war . . . Was ich
+                        dann tue — ja, das wird die Zeit lehren, vorläufig bin ich nur froh, so sein
+                        zu dürfen, wie ich bin", schließt <persName key="lili">Lili
+                        Elbe</persName>.</p>
 
 
-                    <p><hi rend="bold"><persName key="wegenerG">Frau Gerda</persName> sagt . . . </hi></p>
+                    <p>
+                        <hi rend="emphasis"><persName key="wegenerG">Frau Gerda</persName> sagt . .
+                            . </hi>
+                    </p>
                     <!--How do I encode this?-->
 
-                    <p>Was sie zu allem sage, frage ich erschüttert <persName key="wegenerG">Frau Gerda</persName>. "Ich bin glücklich,
-                        daß <persName key="lili">Lili</persName> jetzt ein glück-licher Mensch geworden ist. Ich werde sie nie
-                        verlassen. Wir sind Freundinnen für Lebenszeit. Und ich bin ja auch die
-                        Berufenste, ihr beizustehen, sie zu leiten, damit sie ihren Weg, diesen
+                    <p>Was sie zu allem sage, frage ich erschüttert <persName key="wegenerG">Frau
+                            Gerda</persName>. "Ich bin glücklich, daß <persName key="lili"
+                            >Lili</persName> jetzt ein glück-licher Mensch geworden ist. Ich werde
+                        sie nie verlassen. Wir sind Freundinnen für Lebenszeit. Und ich bin ja auch
+                        die Berufenste, ihr beizustehen, sie zu leiten, damit sie ihren Weg, diesen
                         neuen, wunderbaren Weg gehen kann."</p>
-                    <p>Mehr sagt <persName key="wegenerG">Frau Gerda</persName> nicht, lächelt aus ihren tapferen Augen, die nichts von
-                        dem Leid, das sie erfahren hat, verraten . . . [Picture: Die Malerin <persName key="wegenerG">Gerda Wegener</persName>, die frühere Frau <persName key="wegenerE">Einar Wegener</persName>s (Paris, 1930)]</p><pb style="page"
-                        n="443"
+                    <p>Mehr sagt <persName key="wegenerG">Frau Gerda</persName> nicht, lächelt aus
+                        ihren tapferen Augen, die nichts von dem Leid, das sie erfahren hat,
+                        verraten . . . <figure
+                            facs="http://www.lilielbe.org/media/periodicals/1931-05-07ScherlMagazin_16.jpg">
+                            <figDesc><hi rend="bold">Die Malerin <persName key="wegenerG">Gerda
+                                        Wegener</persName>, die frühere Frau <persName
+                                        key="wegenerE">Einar Wegener</persName>s (Paris,
+                                1930)</hi></figDesc>
+                        </figure></p>
+                    <pb style="page" n="443"
                         facs="http://lilielbe.org/media/periodicals/1931-05-07ScherlMagazin_05.jpg"/>
-                    <p><hi rend="bold"><persName key="warnekros">Der Arzt</persName> erzählt . . .</hi></p>
+                    <p>
+                        <hi rend="emphasis"><persName key="warnekros">Der Arzt</persName> erzählt .
+                            . .</hi>
+                    </p>
                     <!--How do I encode this?-->
-                    <p>"Ich will Ihnen gern erzählen, was ich zu erzählen habe", sagt <persName key="warnekros">der Arzt in <placeName key="dresden">Dresden</placeName></persName>. "Ich kenne die Frau, die jetzt <persName key="lili">Lili Elbe</persName> heißt, die früher also der
-                        Maler <persName key="wegenerE">Einar Wegener</persName> war, von einem Pariser Aufenthalt her. Damals stand sie
-                        vor dem Selbstmord . . . Sie konnte sich im Leben nicht zurechtfinden.
-                        Hervorragende französische Ärzte hatten ihr nicht helfen können, sie standen
-                        auf dem Standpunkt, daß ihr nicht zu helfen sei, daß sich in ihr Schicksal
-                        finden müsse. Ihre Familie und ihre Freunde baten mich dringlich, sie
-                        wenigstens zu untersuchen. Und da ich mit dem unglücklichen Menschenkind
-                        das tiefste Mitgefühl hatte, willigte ich schließlich ein.</p>
+                    <p>"Ich will Ihnen gern erzählen, was ich zu erzählen habe", sagt <persName
+                            key="warnekros">der Arzt in <placeName key="dresden"
+                            >Dresden</placeName></persName>. "Ich kenne die Frau, die jetzt
+                            <persName key="lili">Lili Elbe</persName> heißt, die früher also der
+                        Maler <persName key="wegenerE">Einar Wegener</persName> war, von einem
+                        Pariser Aufenthalt her. Damals stand sie vor dem Selbstmord . . . Sie konnte
+                        sich im Leben nicht zurechtfinden. Hervorragende französische Ärzte hatten
+                        ihr nicht helfen können, sie standen auf dem Standpunkt, daß ihr nicht zu
+                        helfen sei, daß sich in ihr Schicksal finden müsse. Ihre Familie und ihre
+                        Freunde baten mich dringlich, sie wenigstens zu untersuchen. Und da ich mit
+                        dem unglücklichen Menschenkind das tiefste Mitgefühl hatte, willigte ich
+                        schließlich ein.</p>
                     <p>Zu meiner Überraschung fand ich da, obgleich sie in ihrem Äußern ausgeprägt
                         männliche Züge hatte, daß diese Züge nur sekundärer Nautr waren—in
                         Wirklichkeit war ihre Anatomie die einer Frau . . . Für einen Fachmann
@@ -304,97 +385,131 @@
                         konnte. Aber ich meinte, die Chance sei größer als das Risiko. Jetzt
                         hinterher bin ich stolz, sagen zu können, daß das Experiment über all
                         Erwartungen hinaus geglückt ist.</p>
-                    <p><persName key="lili">Mein Patient</persName> war damit einverstanden, zu mir in <placeName key="womensClinic">die Klinik nach <placeName key="dresden">Dresden</placeName></placeName> zu
-                        kommen und sich von mir behandeln zu lassen. Vorher waren Untersuchungen
-                        durch zwei namhafte Berliner Internisten vorgenommen worden, vor allem
-                        hatte der eine Blutproben gemacht. Über Einzelheiten kann ich mich nicht
-                        äußern. Nur so viel kann ich sagen, daß die Operation (es waren mehrere)
-                        sehr kimpliziert und nicht ungefährlich war. Unter anderem wurde schließlich
-                        eine Art Verjüngungskur vorgenommen, indem der Patientin—sie war Anfang der
-                        Vierzig—von einer 26 Jahre alten Frau Ovarien eingesetzt wurden.</p>
-                    <p>Und nach Gelingen der Operationen geschah das Merkwürdige und Wunderbare,
-                        daß ihre schlummernde Weiblichkeit plötzlich erwachte und sich zu
-                        entfalten began, sowohl seelisch wie körperlich. Sie ist jetzt eine völlig
-                        normale Frau, und währen ihr früher das Leben eine Qual war, hat sie jetzt
-                        ihre Gemütsruhe und ihr seelisches Gleichgewicht wiedergefunded. Alles
-                        deutet darauf hin, daß sie noch viele gute Jahre vor sich hat . . . Und dann
-                        ist dieser eigenmächtige Eingriff in die Ordnung der Natur völlig zu
-                        verantworten und zu rechtfertigen." [Picture: <persName key="lili">Lile Elbe</persName> (der in eine Frau verwandelte <persName key="wegenerE">Einar Wegener</persName>) im Garten <placeName key="womensClinic">der Staatlichen Frauenklinik</placeName> zu <placeName key="dresden">Dresden</placeName> (Mai 1930)]</p>
+                    <p><persName key="lili">Mein Patient</persName> war damit einverstanden, zu mir
+                        in <placeName key="womensClinic">die Klinik nach <placeName key="dresden"
+                                >Dresden</placeName></placeName> zu kommen und sich von mir
+                        behandeln zu lassen. Vorher waren Untersuchungen durch zwei namhafte
+                        Berliner Internisten vorgenommen worden, vor allem hatte der eine Blutproben
+                        gemacht. Über Einzelheiten kann ich mich nicht äußern. Nur so viel kann ich
+                        sagen, daß die Operation (es waren mehrere) sehr kimpliziert und nicht
+                        ungefährlich war. Unter anderem wurde schließlich eine Art Verjüngungskur
+                        vorgenommen, indem der Patientin—sie war Anfang der Vierzig—von einer 26
+                        Jahre alten Frau Ovarien eingesetzt wurden.</p>
+                    <p>Und nach Gelingen der Operationen geschah das Merkwürdige und Wunderbare, daß
+                        ihre schlummernde Weiblichkeit plötzlich erwachte und sich zu entfalten
+                        began, sowohl seelisch wie körperlich. Sie ist jetzt eine völlig normale
+                        Frau, und währen ihr früher das Leben eine Qual war, hat sie jetzt ihre
+                        Gemütsruhe und ihr seelisches Gleichgewicht wiedergefunded. Alles deutet
+                        darauf hin, daß sie noch viele gute Jahre vor sich hat . . . Und dann ist
+                        dieser eigenmächtige Eingriff in die Ordnung der Natur völlig zu
+                        verantworten und zu rechtfertigen." <figure
+                            facs="http://www.lilielbe.org/media/periodicals/1931-05-07ScherlMagazin_11.jpg">
+                            <figDesc><hi rend="bold"><persName key="lili">Lile Elbe</persName> (der
+                                    in eine Frau verwandelte <persName key="wegenerE">Einar
+                                        Wegener</persName>) im Garten <placeName key="womensClinic"
+                                        >der Staatlichen Frauenklinik</placeName> zu <placeName
+                                        key="dresden">Dresden</placeName> (Mai 1930)</hi></figDesc>
+                        </figure></p>
                     <pb style="page" n="444"
                         facs="http://lilielbe.org/media/periodicals/1931-05-07ScherlMagazin_06.jpg"/>
-                    <p><hi rend="bold">FAHRT DURCH NACHT</hi></p>
-                    <p><hi rend="bold">Von <persName key="lili">Lili Elbe</persName></hi></p>
-                    <p><hi rend="italics"><persName key="lili">Lili Elbe</persName> will all das Schwere, das sie erlebt hat, sich
-                            von der Seele schreiben. Ihr Buch, das im Spätsommer u. a. in deutscher
-                            Sprache vorliegen soll, wird die Beichte einer Frau sein, die ein
-                            Menschenleben lang als Maler <persName key="wegenerE">Einar Wegener</persName> gelebt und gelitten hat. Wir
+                    <p>
+                        <hi rend="emphasis">FAHRT DURCH NACHT</hi>
+                    </p>
+                    <p>
+                        <hi rend="emphasis">Von <persName key="lili">Lili Elbe</persName></hi>
+                    </p>
+                    <p>
+                        <hi rend="italics"><persName key="lili">Lili Elbe</persName> will all das
+                            Schwere, das sie erlebt hat, sich von der Seele schreiben. Ihr Buch, das
+                            im Spätsommer u. a. in deutscher Sprache vorliegen soll, wird die
+                            Beichte einer Frau sein, die ein Menschenleben lang als Maler <persName
+                                key="wegenerE">Einar Wegener</persName> gelebt und gelitten hat. Wir
                             sind in der Lage, aus dieser Beichte schon jetzt eine Probe zum Abdruck
-                            zu bringen, einen Auszug aus einem der ersten Kapitel, das <persName key="wegenerE">Einar Wegener</persName>s schicksalsschwere Fahrt von <placeName key="paris">Paris</placeName> nach <placeName key="berlin">Berlin</placeName> erzählt und im
-                            tiefsten Sinne der Abschied <persName key="wegenerE">Einar</persName>s von seiner bisherigen Wesensform als
-                            Mann ist: Zum letztenmal trifft er als Mann mit einer Frau zusammen, zum
-                            letztenmal darf er "Ritter" dem "schwachen Geschlecht" gegenüber sein. –
-                            Denn in <placeName key="berlin">Berlin</placeName> entscheidet sich die Frage seiner künftigen Lebensform
-                            als Frau.</hi></p>
-                    <p>Langsam steigerte sich die Geschwindigkeit des Zuges. <persName key="wegenerE">Einar</persName> saß hingesunken
-                        auf seinem Eckplatz im Abteil—mit leeren Augen. Die Verstädte von <placeName key="paris">Paris</placeName>,
-                        die hastiger vorüberglitten, zerstreuten sich, wurden Häuser mit Gärten,
-                        gingen über in Felder mit vereinzelten großen, aufragenden
-                        Reklameschildern. Er rauchte eine Zigarette nach der anderen. Eine Art
-                        Traurigkeit rührte sich in ihm, beinahe wie Gewissenbisse, und schwand
-                        wieder hin im Rauch seiner Zigarette.</p>
-                    <p><persName key="wegenerG">Gerda</persName>—<persName key="rossiniEl">Elena</persName>—diese beiden lieben Freundinnen, denen er es vor allem zu
-                        verdanken hatte, daß er <placeName key="paris">Paris</placeName> wie seine Heimat fühlte—<placeName key="paris">Paris</placeName>—hatte er
-                        eigentlich <placeName key="paris">Paris</placeName> gesehen, jetzt, wo er wegfuhr? Er hatte nicht einmal daran
-                        gedacht, sich aus dem Fenster hinauszubeugen und zum letztenmal die schlanke
-                        Silhouette des <placeName key="eiffel">Eiffelturm</placeName>s und die weiße Kuppel von <placeName key="sacreCoeur">Sacré-Cœur</placeName> zu sehen,
-                        jetzt, ehe sie für immer am Horizont verblaßten.</p>
-                    <p>Für immer? Ja, für ihn was es für immer! Denn er, <persName key="wegenerE">Einar</persName>, er würde nie mehr
-                        nach <placeName key="paris">Paris</placeName> zurückkommen. Vielleicht <persName key="lili">Lili</persName> . . . Aber das war ja etwas ganz
-                        anderes. Er fühlte einen Stich im Herzen.</p>
+                            zu bringen, einen Auszug aus einem der ersten Kapitel, das <persName
+                                key="wegenerE">Einar Wegener</persName>s schicksalsschwere Fahrt von
+                                <placeName key="paris">Paris</placeName> nach <placeName
+                                key="berlin">Berlin</placeName> erzählt und im tiefsten Sinne der
+                            Abschied <persName key="wegenerE">Einar</persName>s von seiner
+                            bisherigen Wesensform als Mann ist: Zum letztenmal trifft er als Mann
+                            mit einer Frau zusammen, zum letztenmal darf er "Ritter" dem "schwachen
+                            Geschlecht" gegenüber sein. – Denn in <placeName key="berlin"
+                                >Berlin</placeName> entscheidet sich die Frage seiner künftigen
+                            Lebensform als Frau.</hi>
+                    </p>
+                    <p>Langsam steigerte sich die Geschwindigkeit des Zuges. <persName
+                            key="wegenerE">Einar</persName> saß hingesunken auf seinem Eckplatz im
+                        Abteil—mit leeren Augen. Die Verstädte von <placeName key="paris"
+                            >Paris</placeName>, die hastiger vorüberglitten, zerstreuten sich,
+                        wurden Häuser mit Gärten, gingen über in Felder mit vereinzelten großen,
+                        aufragenden Reklameschildern. Er rauchte eine Zigarette nach der anderen.
+                        Eine Art Traurigkeit rührte sich in ihm, beinahe wie Gewissenbisse, und
+                        schwand wieder hin im Rauch seiner Zigarette.</p>
+                    <p><persName key="wegenerG">Gerda</persName>—<persName key="rossiniEl"
+                            >Elena</persName>—diese beiden lieben Freundinnen, denen er es vor allem
+                        zu verdanken hatte, daß er <placeName key="paris">Paris</placeName> wie
+                        seine Heimat fühlte—<placeName key="paris">Paris</placeName>—hatte er
+                        eigentlich <placeName key="paris">Paris</placeName> gesehen, jetzt, wo er
+                        wegfuhr? Er hatte nicht einmal daran gedacht, sich aus dem Fenster
+                        hinauszubeugen und zum letztenmal die schlanke Silhouette des <placeName
+                            key="eiffel">Eiffelturm</placeName>s und die weiße Kuppel von <placeName
+                            key="sacreCoeur">Sacré-Cœur</placeName> zu sehen, jetzt, ehe sie für
+                        immer am Horizont verblaßten.</p>
+                    <p>Für immer? Ja, für ihn was es für immer! Denn er, <persName key="wegenerE"
+                            >Einar</persName>, er würde nie mehr nach <placeName key="paris"
+                            >Paris</placeName> zurückkommen. Vielleicht <persName key="lili"
+                            >Lili</persName> . . . Aber das war ja etwas ganz anderes. Er fühlte
+                        einen Stich im Herzen.</p>
                     <p>Eine Glocke erklang im Korridor:"Le dejeuner premier service!"</p>
-                    <p>Allgemeiner Aufbruch im Abteil. <persName key="wegenerE">Einar</persName> schloß sich dem Strom der Reisenden
-                        nach dem Speisewagen an.</p>
-                    <p>Als er zurückkam, blieb er bei einem Korridorfenster stehen. Der Zug raste
-                        in rhythmischer Fahrt durch <placeName key="franceNorthern">Nordfrankreich</placeName> . . .</p>
-                    <p>Plötzlich krümmte <persName key="wegenerE">Einar</persName> sich vor Schmerzen; er mußte sich am Handgriff des
-                        Fensters festhelten. Hilflos blickete er auf seine Uhr. War es wirklich
-                        noch nicht mehr als 3? Wie die Zeit hinschlich! . . . Einen Augenblick
-                        bereut er bitter, <persName key="wegenerG">Gerda</persName> daran gehindert zu haben, ihn zu begleiten. Dann riß
-                        er sich wieder zusammen, richtete sich auf und steckte sich eine Zigarette
-                        an. Rechts und links sausten Felder und neu aufgebaute Ortschaften vorüber,
-                        und Kriegsfriedhöfe . . . Und wieder Felder und wieder Orte, Ebenen und
-                        Hügel. Er sah gar nicht mehr hinaus. Erst die Zollgrenze brachte eine kleine
-                        Abwechslung in den endlosen Nachmittag hinein.</p>
-                    <p>Dann ging es in Schneckenfahr durch <placeName key="belgium">Belgien</placeName>. Eine neue Grenze mußte erreicht
-                        werden, um die Energie der Lokomotive neu zu entfachen. Jetzt raste der Zug
-                        in <placeName key="germany">Deutschland</placeName> hinein, und die Nacht sickerte aufs Land.</p>
-                    <p><persName key="wegenerE">Einar</persName> saß auf seinem Eckplatz im Abteil. Die Schmerzen waren so heftig
-                        geworden, daß er sich im Korridor nicht mehr aufrecht halten konnte. Er
-                        schloß die Augen. Vielleicht wäre es dich viel leichte gewesen, dieses
-                        phantastische Experiment nicht zu versuchen. Aber dann entsann er sich
-                        einer Briefstelle an seinen Arztfreund in <placeName key="dresden">Dresden</placeName>: "Ich verschreibe mich
-                        Ihnen auf Leben und Tod, wenn nur <persName key="lili">Lili</persName> weiterleben darf." Alles, was noch
-                        an männlichem Stolz in ihm übrig war, rührte sich in ihm: "Also muß ich
-                        Berin erreichen", sagte er zu sich selbst.</p>
+                    <p>Allgemeiner Aufbruch im Abteil. <persName key="wegenerE">Einar</persName>
+                        schloß sich dem Strom der Reisenden nach dem Speisewagen an.</p>
+                    <p>Als er zurückkam, blieb er bei einem Korridorfenster stehen. Der Zug raste in
+                        rhythmischer Fahrt durch <placeName key="franceNorthern"
+                            >Nordfrankreich</placeName> . . .</p>
+                    <p>Plötzlich krümmte <persName key="wegenerE">Einar</persName> sich vor
+                        Schmerzen; er mußte sich am Handgriff des Fensters festhelten. Hilflos
+                        blickete er auf seine Uhr. War es wirklich noch nicht mehr als 3? Wie die
+                        Zeit hinschlich! . . . Einen Augenblick bereut er bitter, <persName
+                            key="wegenerG">Gerda</persName> daran gehindert zu haben, ihn zu
+                        begleiten. Dann riß er sich wieder zusammen, richtete sich auf und steckte
+                        sich eine Zigarette an. Rechts und links sausten Felder und neu aufgebaute
+                        Ortschaften vorüber, und Kriegsfriedhöfe . . . Und wieder Felder und wieder
+                        Orte, Ebenen und Hügel. Er sah gar nicht mehr hinaus. Erst die Zollgrenze
+                        brachte eine kleine Abwechslung in den endlosen Nachmittag hinein.</p>
+                    <p>Dann ging es in Schneckenfahr durch <placeName key="belgium"
+                            >Belgien</placeName>. Eine neue Grenze mußte erreicht werden, um die
+                        Energie der Lokomotive neu zu entfachen. Jetzt raste der Zug in <placeName
+                            key="germany">Deutschland</placeName> hinein, und die Nacht sickerte
+                        aufs Land.</p>
+                    <p><persName key="wegenerE">Einar</persName> saß auf seinem Eckplatz im Abteil.
+                        Die Schmerzen waren so heftig geworden, daß er sich im Korridor nicht mehr
+                        aufrecht halten konnte. Er schloß die Augen. Vielleicht wäre es dich viel
+                        leichte gewesen, dieses phantastische Experiment nicht zu versuchen. Aber
+                        dann entsann er sich einer Briefstelle an <persName key="warnekros">seinen
+                            Arztfreund in <placeName key="dresden">Dresden</placeName></persName>:
+                        "Ich verschreibe mich Ihnen auf Leben und Tod, wenn nur <persName key="lili"
+                            >Lili</persName> weiterleben darf." Alles, was noch an männlichem Stolz
+                        in ihm übrig war, rührte sich in ihm: "Also muß ich Berin erreichen", sagte
+                        er zu sich selbst.</p>
                     <p>Er versuchte seinen Gedanken eine andere Richtung zu geben, um seine
-                        zunehmende Nervosität zu dämpfen, ihm fiel ein Zusammentreffen mit
-                        einem "Kollegen" auf <placeName key="stroget">dem "Strög"</placeName> in <placeName key="copenhagen">Kopenhagen</placeName> ein, als er dort einmal eine
-                        Ausstellung abhielt: "Jetzt will ich Ihnen einmal meine ehrlich Meinung
-                        sagen, Lieber <persName key="wegenerE">Wegener</persName>." –"Lieber nicht, Verehrter", war <persName key="wegenerE">Einar</persName> ihm schnell
-                        ins Wort gefallen, "den Sie
-                        wissen,<pb style="page"
-                        n="445"
-                        facs="http://lilielbe.org/media/periodicals/1931-05-07ScherlMagazin_07.jpg"/>
-                        ich bin ein gutter Boxer!" Und der "Kollege" war plötzlich
+                        zunehmende Nervosität zu dämpfen, ihm fiel ein Zusammentreffen mit einem
+                        "Kollegen" auf <placeName key="stroget">dem "Strög"</placeName> in
+                            <placeName key="copenhagen">Kopenhagen</placeName> ein, als er dort
+                        einmal eine Ausstellung abhielt: "Jetzt will ich Ihnen einmal meine ehrlich
+                        Meinung sagen, Lieber <persName key="wegenerE">Wegener</persName>." –"Lieber
+                        nicht, Verehrter", war <persName key="wegenerE">Einar</persName> ihm schnell
+                        ins Wort gefallen, "den Sie wissen,<pb style="page" n="445"
+                            facs="http://lilielbe.org/media/periodicals/1931-05-07ScherlMagazin_07.jpg"
+                        /> ich bin ein gutter Boxer!" Und der "Kollege" war plötzlich
                         zusammengeschrumpft wie eine Schweinsblase, in die man ein Loch gestrochen
                         hat, und war lautlos verschwunden.</p>
-                    <p>Ein leises Lachen schüttelte <persName key="wegenerE">Einar</persName> bei dieser Erinnerung, -- aber dabei
-                        erwachten aufs neue die Schmerzen, und er fühlte wieder das Schlingern des
-                        Wagens, das Stoßen dar Räder und wie Dolchstiche jede Erschütterung des
-                        Zuges.</p>
-                    <p>Als sich das Abateil nach <placeName key="cologne">Köln</placeName>, wo die Schlafwagen angekoppelt wurden,
-                        leerte – den die übrigen Reisenden hatten Schlafplätze bestellt --, fühlte
-                        er die Leere um sich wie eine Wohltat. Jetzt war er endlich allein.</p>
+                    <p>Ein leises Lachen schüttelte <persName key="wegenerE">Einar</persName> bei
+                        dieser Erinnerung, -- aber dabei erwachten aufs neue die Schmerzen, und er
+                        fühlte wieder das Schlingern des Wagens, das Stoßen dar Räder und wie
+                        Dolchstiche jede Erschütterung des Zuges.</p>
+                    <p>Als sich das Abateil nach <placeName key="cologne">Köln</placeName>, wo die
+                        Schlafwagen angekoppelt wurden, leerte – den die übrigen Reisenden hatten
+                        Schlafplätze bestellt --, fühlte er die Leere um sich wie eine Wohltat.
+                        Jetzt war er endlich allein.</p>
                     <p>Er stand auf, schlenderte hin und her, streckte sich und gähnte, eigentlich
                         war er schläfrig. Er steckte sich eine Zigarette an, da überfielen ihn neue
                         Schmerzen. Und diesmal war der Anfall so stark, daß er mit einem halb
@@ -406,73 +521,90 @@
                     <p>Etwas später fand er sich selber auf dem Boden des Abteils wieder, den Kopf
                         gegen die Sitzbank gelehnt. Verwirrt blicket er sich um. Was war geschehen?
                         Ja, jetzt entsann er sich. Was war die Uhr? Wie lange hatte er hir gelegen?
-                        12! Noch nich später als 12? Noch Sieben Stunden bis <placeName key="berlin">Berlin</placeName> . . .</p>
+                        12! Noch nich später als 12? Noch Sieben Stunden bis <placeName key="berlin"
+                            >Berlin</placeName> . . .</p>
                     <p>Mit größter Vorsicht versuchte er sich zu erheben. Langsam gelang es ihm,
                         wieder auf den Sitzplatz zu kommen. Ja, im Augenblick ging es ihm also etwas
                         besser. Aber es würde wohl das best sein, zu versuchen, sich hinzulagen.
                         Vielleicht würde er schlafen können. Er fühlte sich grenzenlos
                         erschöpft.</p>
                     <p>Und er legte sich hin und deckte sich mit seinem Mantel zu. Jetzt fror ihn
-                        plötzlich. Er hatte gewiß Fieber. Das Deckenlicht des Abteils drang
-                        blendend durch seine geschlossenen Lider. Vielleicht würde es das beste
-                        sein, das Licht etwas zu dämpfen oder es vielleicht ganz auszudrehen. Er
-                        sammelte seine Kräfte, erhob sich zog die Vorhänge nach dem Korridor vor und
-                        drehte das Licht aus.</p>
+                        plötzlich. Er hatte gewiß Fieber. Das Deckenlicht des Abteils drang blendend
+                        durch seine geschlossenen Lider. Vielleicht würde es das beste sein, das
+                        Licht etwas zu dämpfen oder es vielleicht ganz auszudrehen. Er sammelte
+                        seine Kräfte, erhob sich zog die Vorhänge nach dem Korridor vor und drehte
+                        das Licht aus.</p>
                     <p>Im selben Augenblick raste der Zug mit ohrenbetäubendem Lärm durch eine
                         Station, deren Bahnsteiglampen mit blauweißem Schimmer vor seinen Fenstern
                         vorbeischwirrten. Erschöpft fiel er auf seinen Platz nieder und zog den
                         Mantel bis zu den Ohren über sich.</p>
                     <p>Hatte er hohes Fieber? Begann er Halluzinationen zu bekommen? Er konnte
-                        fühlen, [Picture: Ein Werk des Malers <persName key="wegenerE">Einar Wegener</persName>: Sommer in <placeName key="franceSouth">Südfrankreich</placeName>] wie alle Farbe aus seinem Gesicht wich . . . seine Zähne
+                        fühlen, <figure
+                            facs="http://www.lilielbe.org/media/periodicals/1931-05-07ScherlMagazin_12.jpg">
+                            <figDesc><hi rend="bold">Ein Werk des Malers <persName key="wegenerE"
+                                        >Einar Wegener</persName>: Sommer in <placeName
+                                        key="franceSouth">Südfrankreich</placeName></hi></figDesc>
+                        </figure> wie alle Farbe aus seinem Gesicht wich . . . seine Zähne
                         klapperten . . . wie kalt es im Abteil war. Er bebte vor Kälte, und
                         Angstschweiß floß ihm von den Schläfen . . . </p>
-                    <p>Der Zug fuhr langsamer, hielt endlich bei einer Station. "<placeName key="hanover">Hannover</placeName>, <placeName key="hanover">Hannover</placeName>"
-                        – und wieder ferner "<placeName key="hanover">Hannover</placeName>" hörte er. Hammerschläge gegen die Wagenräder.
+                    <p>Der Zug fuhr langsamer, hielt endlich bei einer Station. "<placeName
+                            key="hanover">Hannover</placeName>, <placeName key="hanover"
+                            >Hannover</placeName>" – und wieder ferner "<placeName key="hanover"
+                            >Hannover</placeName>" hörte er. Hammerschläge gegen die Wagenräder.
                         Lärm vor seinem Fenster. Stimmen—alles wie gedämpft durch einen
                         Wattevorhang. Türen wurden geschlagen. Die Maschine zog wieder an, der Zug
                         ächzte und setzte sich langsam wieder in Gang.</p>
-                    <p>Plötzlich sprang <persName key="wegenerE">Einar</persName> auf. Die Tür seines Abtails wurde aufgerissen. Eine
-                        Damensilhouette zeigte sich in der Öffnung gegen das Licht vom Korridor.
-                        Einen Augenblick zögerte sie wohl wegen des Dunkels im Abteil, -- dann legte
-                        sie einen Handkoffer in das Netz und ließ sich erschöpft in die Ecke <persName key="wegenerE">Einar</persName>
-                        gegenüber fallen.</p>
+                    <p>Plötzlich sprang <persName key="wegenerE">Einar</persName> auf. Die Tür
+                        seines Abtails wurde aufgerissen. Eine Damensilhouette zeigte sich in der
+                        Öffnung gegen das Licht vom Korridor. Einen Augenblick zögerte sie wohl
+                        wegen des Dunkels im Abteil, -- dann legte sie einen Handkoffer in das Netz
+                        und ließ sich erschöpft in die Ecke <persName key="wegenerE"
+                            >Einar</persName> gegenüber fallen.</p>
                     <p>Er machte Licht.</p>
-                    <p>Etwas verärgert musterte er <persName key="bride">die Dame</persName>, die so jäh seiner Einsamkeit ein Ende
-                        gemacht hatte. Jetzt war er also gezwungen, bis nach <placeName key="berlin">Berlin</placeName> mit ihr
+                    <p>Etwas verärgert musterte er <persName key="bride">die Dame</persName>, die so
+                        jäh seiner Einsamkeit ein Ende gemacht hatte. Jetzt war er also gezwungen,
+                        bis nach <placeName key="berlin">Berlin</placeName> mit ihr
                         zusammenzusitzen. Denn der Zug hielt vor Berlin nicht mehr. Aber er riß sich
                         zusammen und tat so, als sei nichts geschehen. Denn in ihm war noch so viel
                         Mann, daß er keine Teilnahme von Fremden wünschte.</p>
-                    <pb style="page"
-                        n="446"
+                    <pb style="page" n="446"
                         facs="http://lilielbe.org/media/periodicals/1931-05-07ScherlMagazin_08.jpg"/>
                     <p>Sie war übrigens jung und recht elegant, -- aber ihre weit aufgerissenen
                         Augen hatten einen leeren Ausdruck. Sie sah aus, als starre sie durch die
-                        Wände auf irgend etwas Fernes, das sie versteinerte. <persName key="wegenerE">Einar</persName> fühlte eine
-                        entsetzliche seltsames Unbehangen.</p>
+                        Wände auf irgend etwas Fernes, das sie versteinerte. <persName
+                            key="wegenerE">Einar</persName> fühlte eine entsetzliche seltsames
+                        Unbehangen.</p>
                     <p>Die Hitze im Abteil war unerträglich. Er fühlte eine entsetzliche Trockenheit
                         im Halse. Er begriff nicht, wieso es plötzlich so warm geworden war. Kurz
                         zuvor hatten noch vor Kälte seine Zähen geklappert . . .</p>
                     <p>Und wieder jagte der Zug mit teuflischem Lärm an einer Station vorbei, und
                         die Bahnsteig-lichter blendeten durch das Waggonfenster . . . Er sprang auf
                         und zog die Vorhänge wieder vor.</p>
-                    <p>Jetzt weinte <persName key="bride">die Fremde</persName>! Tränen stürzten über ihr blasses Gesicht, und sie
-                        machte nicht den geringsten Versuch, ihr Weinen zu verbergen oder die Tränen
-                        zu trocknen. Hatte sie den nicht gesehen, daß er ihr gegenübersaß? Frauen
-                        sind sonderbar. Aber waren sie so verschieden von Männern? Besaßen sie gar
-                        keinen Stolz? Waren sie so schwach?</p>
-                    <p><persName key="lili">Lili</persName> – würde sie auch so werden? Ja – eigentlich war auch sie immer so
-                        gewesen . . .</p>
-                    <p>Ein Mitgefühl ergriff ihn plötzlich mit dem Leid <persName key="bride">dieser unbekannten jungen Frau</persName>.</p>
+                    <p>Jetzt weinte <persName key="bride">die Fremde</persName>! Tränen stürzten
+                        über ihr blasses Gesicht, und sie machte nicht den geringsten Versuch, ihr
+                        Weinen zu verbergen oder die Tränen zu trocknen. Hatte sie den nicht
+                        gesehen, daß er ihr gegenübersaß? Frauen sind sonderbar. Aber waren sie so
+                        verschieden von Männern? Besaßen sie gar keinen Stolz? Waren sie so
+                        schwach?</p>
+                    <p><persName key="lili">Lili</persName> – würde sie auch so werden? Ja –
+                        eigentlich war auch sie immer so gewesen . . .</p>
+                    <p>Ein Mitgefühl ergriff ihn plötzlich mit dem Leid <persName key="bride">dieser
+                            unbekannten jungen Frau</persName>.</p>
                     <p>"Mademoiselle", begann er leise . . .</p>
-                    <p>Sie schien ihn nicht zu hören. Da erinnerte er sich, daß er in <placeName key="germany">Deutschland</placeName>
-                        war.</p>
+                    <p>Sie schien ihn nicht zu hören. Da erinnerte er sich, daß er in <placeName
+                            key="germany">Deutschland</placeName> war.</p>
                     <p>"Gnädiges Fräulein", wiederholte er fast ver-legen . . .</p>
-                    <p>Da hob sie ihre werweinten Augen und sah in <persName key="wegenerE">Einar</persName>s Gesicht ein teilnehmendes
-                        Lächeln. Das war es, was ihr in diesem Augenblick no-tat. Weinige Minuten
-                        später kannte er den Grund ihrer Verzweiflung: Ihr <persName key="pianistXX">Verlobter, ein bekannter Musiker</persName>, war neulich nach <placeName key="berlin">Berlin</placeName> gefahren, um einige Konzerte zu geben. Sie
-                        hatte ihn bereits zurückerwartet und freute sich schon auf das Wiedersehen.
-                        Da hatte sie an diesem Abend zufällig in einer Zeitung gelesen, daß er bei
-                        einem Automobilzusammenstoß schwer verletzt worden sei und jetzt in <placeName>einer Berliner Klinik</placeName> läge. <persName key="wegenerE">Einar</persName> las diesen schlimmen Bericht in der
+                    <p>Da hob sie ihre werweinten Augen und sah in <persName key="wegenerE"
+                            >Einar</persName>s Gesicht ein teilnehmendes Lächeln. Das war es, was
+                        ihr in diesem Augenblick no-tat. Weinige Minuten später kannte er den Grund
+                        ihrer Verzweiflung: Ihr <persName key="pianistXX">Verlobter, ein bekannter
+                            Musiker</persName>, war neulich nach <placeName key="berlin"
+                            >Berlin</placeName> gefahren, um einige Konzerte zu geben. Sie hatte ihn
+                        bereits zurückerwartet und freute sich schon auf das Wiedersehen. Da hatte
+                        sie an diesem Abend zufällig in einer Zeitung gelesen, daß er bei einem
+                        Automobilzusammenstoß schwer verletzt worden sei und jetzt in
+                            <placeName>einer Berliner Klinik</placeName> läge. <persName
+                            key="wegenerE">Einar</persName> las diesen schlimmen Bericht in der
                         zerknitterten Zeitung, die sie ihm hinielt . . .</p>
                     <p>Was konnte er für sie tun? Er hatte immer schon eine gewisse mystische Kraft
                         besessen, Schmerzen bei anderen zu stillen. Hatter er in dieser unheimlichen
@@ -489,8 +621,13 @@
                         Bewegung begann sie im Schlafe zu wimmern wie ein krankes Kind. Er schloß
                         die Augen und versuchte nun auch zu schlafen. Der regelmäßige, jagende
                         Rhythmus des Zuges wiegte sie beide ein. Wie seltsam das Leben doch war!
-                        Reicher an Überraschungen als alle Romane der Welt. Hier saß er nun, <persName key="wegenerE">Einar Wegener</persName>, der Maler aus <placeName key="paris">Paris</placeName>, mit <persName key="bride">einem ganz unbekannten deutschen Fräulein</persName>, das in seinen Armem schlief, und jeder von ihnen beiden fuhr dem
-                        eigenen Schicksal entgegen – irgendwo in <placeName key="germany">Deutschland</placeName> . . .</p>
+                        Reicher an Überraschungen als alle Romane der Welt. Hier saß er nun,
+                            <persName key="wegenerE">Einar Wegener</persName>, der Maler aus
+                            <placeName key="paris">Paris</placeName>, mit <persName key="bride"
+                            >einem ganz unbekannten deutschen Fräulein</persName>, das in seinen
+                        Armem schlief, und jeder von ihnen beiden fuhr dem eigenen Schicksal
+                        entgegen – irgendwo in <placeName key="germany">Deutschland</placeName> . .
+                        .</p>
                     <p>Er saß etwas im Halbschlaf da, wie lange, wußte er nicht. Dann durchzuckte
                         ein dolchspitziger Schmerz seinen Körper, und er war gezwungen, seine
                         Stellung zu ändern.</p>
@@ -500,19 +637,23 @@
                         fremden Reisekameraden in Schlaf zu lullen. Fremd – nein, so fühlte er es
                         eigentlich jetzt nicht. War sie ihm nicht gesandt worden, damit er sich
                         selbst in dieser endlosen Nacht vergessen konnte, vielleicht, damit er eine
-                        gut Tat tun konnte, jetzt, zum Schluß? War <persName key="bride">dieses kleine deutsche Mädchen</persName>,
-                        das hier, an seine Brust gelehnt, schlief, nicht das letzte Mädchen, das an
-                        seiner, <persName key="wegenerE">Einar</persName>s Brust, lag, war es nicht im tiefsten Sinne der Abschied von
-                        anderen . . . war es nicht das letzte Zusammentreffen des Mannes mit der
-                        Frau? . . .</p>
-                    <p>Ein graues, kaltes Morgenlicht sickerte durch die Vorhänge. <persName key="wegenerE">Einar</persName> zog sie
-                        vorsichtig beiseite, und <placeName key="berlin">Berlin</placeName>s Vorstädte glitten hastig vorüber.</p>
-                    <p>Als sein Reisenkamerad mit einem Angstschrei erwachte, ergriff er ihre Hände,
-                        und mit einer mystischen Überzeugung sagte er: "Seien Sie nur ruhig, er ist
-                        nicht tot! Ich selber war in dieser Nacht dem Tode nahe, aber jetzt, wo wir
-                        beide ans Ziel gekommen sind, fühle ich bestimmt, daß er und ich, daß wir
-                        beide leben werden."</p>
-                    <p>Wortlos blicket sie ihn an, als der Zug in <placeName>den Bahnhof <placeName key="friedrichsstrasse">Friedrichstraße</placeName></placeName>
+                        gut Tat tun konnte, jetzt, zum Schluß? War <persName key="bride">dieses
+                            kleine deutsche Mädchen</persName>, das hier, an seine Brust gelehnt,
+                        schlief, nicht das letzte Mädchen, das an seiner, <persName key="wegenerE"
+                            >Einar</persName>s Brust, lag, war es nicht im tiefsten Sinne der
+                        Abschied von anderen . . . war es nicht das letzte Zusammentreffen des
+                        Mannes mit der Frau? . . .</p>
+                    <p>Ein graues, kaltes Morgenlicht sickerte durch die Vorhänge. <persName
+                            key="wegenerE">Einar</persName> zog sie vorsichtig beiseite, und
+                            <placeName key="berlin">Berlin</placeName>s Vorstädte glitten hastig
+                        vorüber.</p>
+                    <p>Als <persName key="bride">sein Reisenkamerad</persName> mit einem Angstschrei
+                        erwachte, ergriff er ihre Hände, und mit einer mystischen Überzeugung sagte
+                        er: "Seien Sie nur ruhig, er ist nicht tot! Ich selber war in dieser Nacht
+                        dem Tode nahe, aber jetzt, wo wir beide ans Ziel gekommen sind, fühle ich
+                        bestimmt, daß er und ich, daß wir beide leben werden."</p>
+                    <p>Wortlos blicket sie ihn an, als der Zug in <placeName>den Bahnhof <placeName
+                                key="friedrichsstrasse">Friedrichstraße</placeName></placeName>
                         rollte. Und als sie ihm Lebewohl sagte, sah er ein Hoffen in ihren
                         verweinten Augen, und er fühlte mit Gewißheit, daß dieses Hoffen nicht
                         zuschanden gemacht werden würde.</p>
@@ -520,162 +661,259 @@
             </div>
             <div type="translation">
                 <div rend="head" style="periodical">
-                    <head><title><anchor type="commentRangeStart" n="1"/>A PERSON CHANGES HIS
-                                SEX<anchor type="commentRangeEnd" n="1"/><note type="editor"
-                                source="plc" corresp="comment_1">This is a literal translation and
-                                the likely translation at the time. Today we would translate the
-                                title asc"A Person Changes Sex."</note></title></head>
-                </div>
-                <div rend="headlines">
-                    <list>
-                        <item rend="primary">Signatures of <persName key="wegenerE">Einar Wegener</persName> and <persName key="lili">Lili Elbe</persName>
-                            <!--How to encode?--> By <persName key="hoyerNiels">Niels
-                                Hoyer</persName></item>
-                    </list>
+                    <head>
+                        <title><anchor type="commentRangeStart" n="1"/>A PERSON CHANGES HIS
+                                SEX<anchor type="commentRangeEnd" n="1"/></title>
+                    </head>
+
+                    <note type="editor" source="plc" corresp="comment_1">This is a literal
+                        translation and the likely translation at the time. Today we would translate
+                        the title as "A Person Changes Sex."</note>
+                    <div rend="headlines">
+
+                        <list>
+                            <item rend="primary">[Signatures of <persName key="wegenerE">Einar
+                                    Wegener</persName> and <persName key="lili">Lili
+                                Elbe</persName>.] By <persName key="hoyerNiels">Niels
+                                    Hoyer</persName></item>
+                        </list>
+                    </div>
+
                 </div>
                 <div rend="body">
-                    <pb style="page"
-                    n="439"/>
-                    <p>When one of the biggest newspapers in <placeName key="copenhagen">Copenhagen</placeName> recently reported that the
-                        marriage of the artist couple <persName key="wegenerE">Einar</persName> and <persName key="wegenerG">Gerda Wegener</persName>, who are well-known
-                        beyond <placeName key="denmark">Denmark</placeName>'s borders, had been declared invalid by the Danish
-                        authorities, a marriage that lasted more than 20 years and was the result of
-                        his childhood love "at first sight", the"uninitiated" caught their breath.
-                        The announcement created a stir. And the whispering began, especially since
-                        <persName key="wegenerG">Gerda Wegener</persName>, who was holding an exhibition of her latest pictures and many
-                        of <persName key="wegenerE">Einar Wegener</persName>'s pictures in <placeName key="copenhagen">Copenhagen</placeName>, declared that <persName key="wegenerE">Einar</persName> was
-                        exhibiting for the very last time. . .</p>
+                    <pb style="page" n="439"/>
+                    <p>When one of the biggest newspapers in <placeName key="copenhagen"
+                            >Copenhagen</placeName> recently reported that the marriage of the
+                        artist couple <persName key="wegenerE">Einar</persName> and <persName
+                            key="wegenerG">Gerda Wegener</persName>, who are well-known beyond
+                            <placeName key="denmark">Denmark</placeName>'s borders, had been
+                        declared invalid by the Danish authorities, a marriage that lasted more than
+                        20 years and was the result of his childhood love "at first sight",
+                        the"uninitiated" caught their breath. The announcement created a stir. And
+                        the whispering began, especially since <persName key="wegenerG">Gerda
+                            Wegener</persName>, who was holding an exhibition of her latest pictures
+                        and many of <persName key="wegenerE">Einar Wegener</persName>'s pictures in
+                            <placeName key="copenhagen">Copenhagen</placeName>, declared that
+                            <persName key="wegenerE">Einar</persName> was exhibiting for the very
+                        last time. . .</p>
                     <p>Soon afterwards, the"uninitiated" found out the cause of both-- from the
-                        mouth of <persName key="lili">Lili Elbe</persName>, a young lady whose name no one had heard before. She was
-                        seen accompanied by <persName key="wegenerG">Gerda Wegener</persName>. Unrecognized, she went through <persName key="wegenerG">Gerda</persName>'s
-                        exhibition with her. She greeted [Two pictures: <persName key="wegenerE">Einar Wegener</persName> as a painter
-                        in <placeName key="paris">Paris</placeName> . . . Now <persName key="lili">Fräulein Lili Elbe</persName> (<placeName key="copenhagen">Copenhagen</placeName>, February 1931)]
-                        <pb style="page" n="440"/> here and there a familiar face, and her greeting met astonished eyes.</p>
+                        mouth of <persName key="lili">Lili Elbe</persName>, a young lady whose name
+                        no one had heard before. She was seen accompanied by <persName
+                            key="wegenerG">Gerda Wegener</persName>. Unrecognized, she went through
+                            <persName key="wegenerG">Gerda</persName>'s exhibition with her. She
+                        greeted <figure
+                            facs="http://www.lilielbe.org/media/periodicals/1931-05-07ScherlMagazin_09.jpg">
+                            <figDesc><hi rend="bold"><persName key="wegenerE">Einar
+                                        Wegener</persName> as a painter in <placeName key="paris"
+                                        >Paris</placeName></hi></figDesc>
+                        </figure><figure
+                            facs="http://www.lilielbe.org/media/periodicals/1931-05-07ScherlMagazin_10.jpg">
+                            <figDesc><hi rend="bold"> . . . Now <persName key="lili">Fräulein Lili
+                                        Elbe</persName> (<placeName key="copenhagen"
+                                        >Copenhagen</placeName>, February 1931)</hi></figDesc>
+                        </figure>
+                        <pb style="page" n="440"/> here and there a familiar face, and her greeting
+                        met astonished eyes.</p>
 
-                    <p>For several years <persName key="wegenerG">Gerda</persName> and <persName key="wegenerE">Einar Wegener</persName> had lived and painted in <placeName key="paris">Paris</placeName>.
-                        When they married, she was 17 and he was 19 years old. . .In <placeName key="paris">Paris</placeName> they had
-                        made a name for themselves. Both exhibited for years in the foremost Salons
-                        of <placeName key="paris">Paris</placeName>, both possessed the <placeName key="academyArt">Academy</placeName>’s "Golden Palms." There is even a
-                        portrait by <persName key="wegenerG">Gerda</persName> in the <placeName key="luxembourgMuseum"><placeName key="luxembourg">Luxembourg</placeName> Museum</placeName> in <placeName key="paris">Paris</placeName>. –</p>
-                    <p>"Why", I asked <persName key="wegenerG">Ms. Gerda</persName>,"does <persName key="wegenerE">Einar</persName> no longer want to paint?"</p>
-                    <p>"<persName key="lili">Lili Elbe</persName> may tell you that", answered <persName key="wegenerG">Gerda Wegener</persName> quietly and simply. . .</p>
+                    <p>For several years <persName key="wegenerG">Gerda</persName> and <persName
+                            key="wegenerE">Einar Wegener</persName> had lived and painted in
+                            <placeName key="paris">Paris</placeName>. When they married, she was 17
+                        and he was 19 years old. . .In <placeName key="paris">Paris</placeName> they
+                        had made a name for themselves. Both exhibited for years in the foremost
+                        Salons of <placeName key="paris">Paris</placeName>, both possessed the
+                            <placeName key="academyArt">Academy</placeName>’s "Golden Palms." There
+                        is even a portrait by <persName key="wegenerG">Gerda</persName> in the
+                            <placeName key="luxembourgMuseum"><placeName key="luxembourg"
+                                >Luxembourg</placeName> Museum</placeName> in <placeName key="paris"
+                            >Paris</placeName>. –</p>
+                    <p>"Why", I asked <persName key="wegenerG">Ms. Gerda</persName>,"does <persName
+                            key="wegenerE">Einar</persName> no longer want to paint?"</p>
+                    <p>"<persName key="lili">Lili Elbe</persName> may tell you that", answered
+                            <persName key="wegenerG">Gerda Wegener</persName> quietly and simply. .
+                        .</p>
                     <p>"Yes, I would like that, because I consider it my duty to tell the truth
-                        about the painter <persName key="wegenerE">Einar Wegener</persName>, who no longer exists. . ."</p>
-                    <p>"<persName key="wegenerE">Einar</persName> is not dead, is he?" I asked horrified.</p>
+                        about the painter <persName key="wegenerE">Einar Wegener</persName>, who no
+                        longer exists. . ."</p>
+                    <p>"<persName key="wegenerE">Einar</persName> is not dead, is he?" I asked
+                        horrified.</p>
                     <p>"No, he is not, but he no longer exists either. He voluntarily extinguished
                         himself to make room for another being who, as he said, has a greater right
                         to exist than himself, and I am that other being. Yes, I know that you and
                         perhaps many others will find it difficult to understand. But my life has
                         turned out so completely different that in reality I am no longer living my
                         previous life; rather, I have concluded one existence and am now beginning
-                        another. <anchor type="commentRangeStart" n="2"/>[Picture: A Porcelain Sculpture by <persName key="wegenerE">Einar Wegener</persName>]<anchor type="commentRangeEnd" n="2"/><note type="editor"
-                            source="plc" corresp="comment_2">Editor’s note: This image appears in the German and British editions only of Man into Woman. In each case it is misattributed to <persName key="wegenerE">Einar Wegener</persName>. <persName key="wegenerE">Einar</persName> never worked in porcelain. The Wegeners’ close friend, <persName key="leyritzL">Léon Leyritz</persName> (<persName key="tempeteJean">Jean Tempéte</persName> in the narrative), with whom they stayed in <placeName key="beaugency">Beaugency</placeName>, did sculpt in porcelain. The figure in this illustration is likely <persName key="lili">Lili</persName> and the Wegeners’ dog, <persName key="hvappe">Hvappe</persName>, sculpted by <persName key="leyritzL">Leyritz</persName>.</note> I will try to
-                        explain it to you."</p>
-                    <p><persName key="lili">Lili</persName> leans back in a deep armchair and puts her high heeled shoes on a stool.
-                        There is a dreamy look in her large, dark eyes. She tells of a small child
-                        who, once born in the <placeName key="jutland">Jutland</placeName> town of <placeName key="vejle">Vejle</placeName>, was declared a boy by the
-                        <persName>pastor</persName> and <persName>midwife</persName> and entered in the church register as <persName key="wegenerE">Einar Wegener</persName>. The child
-                        was very beautiful, and since <persName key="wegenerAM"><persName key="wegenerE">Einar</persName>'s mother</persName> liked to dress up the
-                        boy nicely, there were already many who believed he was a little girl.</p>
-                    <p><persName key="wegenerE">Einar</persName> himself felt like a boy when he played with his brothers, but his
-                        greatest pleasure was driving around his sisters’ doll carriage--but only
-                        when no one saw it. But as the boy was growing up, he sometimes had a
-                        distant feeling that he was not quite like the others. But such thoughts
-                        drifted away in the boy's brain under a gradually growing enthusiasm for art
-                        and literature. The youngster wanted to become an artist. He came to
-                        <placeName key="copenhagen">Copenhagen</placeName> and soon to the <placeName key="academyArt">art academy</placeName>.</p>
-                    <p>Here he met a young girl named <persName key="wegenerG">Gerda Wegener</persName> who had also chosen art as her
-                        profession. It was love at first sight. Both were still very young-- <persName key="lili">Lili</persName>
-                        recounts--when they got married, maybe so young that they didn't really know
-                        what they were doing, but they have never regretted this step later. This
-                        bond, which everyone else always regarded as a marriage, was built on mutual
-                        understanding, unbreakable friendship, inner trust and a sense of
-                        camaraderie in work. That is why they never let each other down, and that is
-                        why they will continue to be close to each other like two true friends who
-                        wish each other the best and want to do everything to help each other.</p>
-                    <p>And <persName key="lili">Lili</persName> continues:"<persName key="wegenerG">Gerda Wegener</persName> often used her husband as a model, almost
-                        always for female nudes, and through <persName key="wegenerG">Gerda Wegener</persName>'s
-                        artistic<pb style="page" n="441"/> instinct it happened that the
-                        feminine element in <persName key="wegenerE">Einar</persName>’s being gradually became more and more strongly
+                        another. <anchor type="commentRangeStart" n="2"/><figure
+                            facs="http://www.lilielbe.org/media/periodicals/1931-05-07ScherlMagazin_14.jpg">
+                            <figDesc><hi rend="bold">A Porcelain Sculpture by <persName
+                                        key="wegenerE">Einar Wegener</persName></hi></figDesc>
+                            <anchor type="commentRangeEnd" n="2"/>
+                        </figure><note type="editor" source="plc" corresp="comment_2">This image
+                            appears in the German and British editions only of Man into Woman. In
+                            each case it is misattributed to <persName key="wegenerE">Einar
+                                Wegener</persName>. <persName key="wegenerE">Einar</persName> never
+                            worked in porcelain. The Wegeners’ close friend, <persName
+                                key="leyritzL">Léon Leyritz</persName> (<persName key="tempeteJean"
+                                >Jean Tempéte</persName> in the narrative), with whom they stayed in
+                                <placeName key="beaugency">Beaugency</placeName>, did sculpt in
+                            porcelain. The figure in this illustration is likely <persName
+                                key="lili">Lili</persName> and the Wegeners’ dog, <persName
+                                key="hvappe">Hvappe</persName>, sculpted by <persName key="leyritzL"
+                                >Leyritz</persName>.</note> I will try to explain it to you."</p>
+                    <p><persName key="lili">Lili</persName> leans back in a deep armchair and puts
+                        her high heeled shoes on a stool. There is a dreamy look in her large, dark
+                        eyes. She tells of a small child who, once born in the <placeName
+                            key="jutland">Jutland</placeName> town of <placeName key="vejle"
+                            >Vejle</placeName>, was declared a boy by the
+                            <persName>pastor</persName> and <persName>midwife</persName> and entered
+                        in the church register as <persName key="wegenerE">Einar Wegener</persName>.
+                        It was a very beautiful child, and since <persName key="wegenerAM"><persName
+                                key="wegenerE">Einar</persName>'s mother</persName> liked to dress
+                        up the boy nicely, there were already many who believed he was a little
+                        girl.</p>
+                    <p><persName key="wegenerE">Einar</persName> himself felt like a boy when he
+                        played with his brothers, but his greatest pleasure was driving around his
+                        sisters’ doll carriage--but only when no one saw it. But as the boy was
+                        growing up, he sometimes had a distant feeling that he was not quite like
+                        the others. But such thoughts drifted away in the boy's brain under a
+                        gradually growing enthusiasm for art and literature. The youngster wanted to
+                        become an artist. He came to <placeName key="copenhagen"
+                            >Copenhagen</placeName> and soon to the <placeName key="academyArt">art
+                            academy</placeName>.</p>
+                    <p>Here he met a young girl named <persName key="wegenerG">Gerda
+                            Wegener</persName> who had also chosen art as her profession. It was
+                        love at first sight. Both were still very young-- <persName key="lili"
+                            >Lili</persName> recounts--when they got married, maybe so young that
+                        they didn't really know what they were doing, but they have never regretted
+                        this step later. This bond, which everyone else always regarded as a
+                        marriage, was built on mutual understanding, unbreakable friendship, inner
+                        trust and a sense of camaraderie in work. That is why they never let each
+                        other down, and that is why they will continue to be close to each other
+                        like two true friends who wish each other the best and want to do everything
+                        to help each other.</p>
+                    <p>And <persName key="lili">Lili</persName> continues:"<persName key="wegenerG"
+                            >Gerda Wegener</persName> often used her husband as a model, almost
+                        always for female nudes, and through <persName key="wegenerG">Gerda
+                            Wegener</persName>'s artistic<pb style="page" n="441"/> instinct it
+                        happened that the feminine element in <persName key="wegenerE"
+                            >Einar</persName>’s being gradually became more and more strongly
                         accentuated, so that he little by little came to the correct knowledge of
                         his true self. . . And now began a number of years that were so filled with
-                        suffering that I would like to think of them no longer. <persName key="wegenerE">Einar Wegener</persName> felt
-                        like someone forced to walk around in a strange garment that restricts him
-                        and makes him feel ridiculous. This psychological suffering had a physical
-                        dimension as well. He sought help from French doctors in <placeName key="paris">Paris</placeName> in vain.
-                        Nobody wanted to believe him. They thought he was hysterical and treated him
-                        with X-rays, which, as it turned out later, did more harm than good."</p>
-                    <p>"By chance," continues <persName key="lili">Lili</persName>," when I had already given up all hopes of ever
-                        becoming a normal feeling and thinking person again, I came into contact
-                        with an outstanding German gynecologist, <persName key="warnekros">Professor Dr. K. v. W.</persName>, the head of
-                        the <placeName key="womensClinic">State Women's Clinic</placeName> in <placeName key="dresden">Dresden</placeName>. He examined me and found that I was not
-                        a man, but rather, to a far greater extent, a woman. The result was that, at
-                        his request, I first went to two specialists in <placeName key="berlin">Berlin</placeName> for examinations and
-                        then to <placeName key="dresden">Dresden</placeName>, where he performed several difficult operations on me in
-                        his clinic. Incidentally, they were the first of this kind that he had ever
-                        carried out. . .</p>
+                        suffering that I would like to think of them no longer. <persName
+                            key="wegenerE">Einar Wegener</persName> felt like someone forced to walk
+                        around in a strange garment that restricts him and makes him feel
+                        ridiculous. This psychological suffering had a physical dimension as well.
+                        He sought help from French doctors in <placeName key="paris"
+                            >Paris</placeName> in vain. Nobody wanted to believe him. They thought
+                        he was hysterical and treated him with X-rays, which, as it turned out
+                        later, did more harm than good."</p>
+                    <p>"By chance," continues <persName key="lili">Lili</persName>," when I had
+                        already given up all hopes of ever becoming a normal feeling and thinking
+                        person again, I came into contact with an outstanding German gynecologist,
+                            <persName key="warnekros">Professor Dr. K. v. W.</persName>, the head of
+                        the <placeName key="womensClinic">State Women's Clinic</placeName> in
+                            <placeName key="dresden">Dresden</placeName>. He examined me and found
+                        that I was not a man, but rather, to a far greater extent, a woman. The
+                        result was that, at his request, I first went to two specialists in
+                            <placeName key="berlin">Berlin</placeName> for examinations and then to
+                            <placeName key="dresden">Dresden</placeName>, where he performed several
+                        difficult operations on me in his clinic. Incidentally, they were the first
+                        of this kind that he had ever carried out. . .</p>
                     <p>There were many months of suffering. I was often close to death. But science
-                        and my own nature won. <persName key="wegenerE">Einar Wegener</persName> came to the <placeName key="womensClinic">clinic</placeName>, and the woman you
-                        are talking to now, who calls herself <persName key="lili">Lili Elbe</persName>, left it."</p>
+                        and my own nature won. <persName key="wegenerE">Einar Wegener</persName>
+                        came to the <placeName key="womensClinic">clinic</placeName>, and the woman
+                        you are talking to now, who calls herself <persName key="lili">Lili
+                            Elbe</persName>, left it."</p>
                     <p>"And are you now happy?" I asked her.</p>
                     <p>"Yes I am. I am as happy, as one can only become when one is released from
                         circumstances that are forced upon one, as one can only be when one feels in
-                        harmony [Picture: <persName key="wegenerE">Einar Wegener</persName> about 12 years ago based on a drawing by
-                        <persName key="kohlL">Louis Kohl</persName>.] with oneself. . . That is exactly what I would like to make
-                        clear: <persName key="wegenerE">Einar Wegener</persName> is no longer, and that is why he can no longer paint –
-                        he did not give it up because he despaired of his art.</p>
+                        harmony <figure
+                            facs="http://www.lilielbe.org/media/periodicals/1931-05-07ScherlMagazin_13.jpg">
+                            <figDesc><hi rend="bold"><persName key="wegenerE">Einar
+                                        Wegener</persName> about 12 years ago based on a drawing by
+                                        <persName key="kohlL">Louis Kohl</persName>.</hi></figDesc>
+                        </figure> with oneself. . . That is exactly what I would like to make clear:
+                            <persName key="wegenerE">Einar Wegener</persName> is no longer, and that
+                        is why he can no longer paint – he did not give it up because he despaired
+                        of his art.</p>
                     <p>"But are you then not capable of painting?"</p>
                     <p>I don’t know. I haven't tried, and I don't feel the urge to do so. Remember,
                         life is still so new to me, I first have to find my way in existence. . .
                         And even if I should try to paint, my whole attitude, my whole outlook on
-                        life is so different from <persName key="wegenerE">Einar</persName>'s that it could never be a continuation of
-                        his work. He was so distinctly masculine in all of his painting style. . .
-                        No, this is and will be <persName key="wegenerE">Einar Wegener</persName>'s last exhibition."</p>
+                        life is so different from <persName key="wegenerE">Einar</persName>'s that
+                        it could never be a continuation of his work. He was so distinctly masculine
+                        in all of his painting style. . . No, this is and will be <persName
+                            key="wegenerE">Einar Wegener</persName>'s last exhibition."</p>
                     <p>"Do you think, then, that you can do without art entirely?"</p>
                     <p>"No, but it is possible that my artistic instinct could express itself in
-                        completely different<pb style="page" n="442"/> [Picture: A painting by
-                        <persName key="wegenerG">Gerda Wegener</persName>: Three women The artist used her husband <persName key="wegenerE">Einar</persName> as a model for
-                        the middle one, while she portrayed herself in the woman on the right]
-                        forms. . . perhaps music. . . what do I know? . . . Life still seems so new
-                        to me, and for the time being I am enjoying being able to indulge in
-                        feminine pursuits. I like sewing, and I love making lampshades. . .</p>
-                    <p>I only came to <placeName key="copenhagen">Copenhagen</placeName> for the exhibition, but I've been here again
-                        recently. <persName key="wegenerG">Gerda Wegener</persName> and I had to go to <placeName key="denmark">Denmark</placeName> to find a new identity for myself
-                        and because the relationship between <persName key="wegenerG">Gerda Wegener</persName> and me had to be put in order,
-                        from a purely legal point of view. I had the necessary reports from the
-                        <placeName key="dresden">Dresden</placeName> doctor with me, and thanks to his authority and the understanding of
-                        the Danish authorities I was able to settle the judicial formalities
-                        relatively quickly. My gender was changed in the church book and I got the
-                        right to my new name. . ."</p>
+                        completely different<pb style="page" n="442"/>
+                        <figure
+                            facs="http://www.lilielbe.org/media/periodicals/1931-05-07ScherlMagazin_15.jpg">
+                            <figDesc><hi rend="bold">A painting by <persName key="wegenerG">Gerda
+                                        Wegener</persName>: Three women The artist used her husband
+                                        <persName key="wegenerE">Einar</persName> as a model for the
+                                    middle one, while she portrayed herself in the woman on the
+                                    right</hi></figDesc>
+                        </figure> forms. . . perhaps music. . . what do I know? . . . Life still
+                        seems so new to me, and for the time being I am enjoying being able to
+                        indulge in feminine pursuits. I like sewing, and I love making lampshades. .
+                        .</p>
+                    <p>I only came to <placeName key="copenhagen">Copenhagen</placeName> for the
+                        exhibition, but I've been here again recently. <persName key="wegenerG"
+                            >Gerda Wegener</persName> and I had to go to <placeName key="denmark"
+                            >Denmark</placeName> to find a new identity for myself and because the
+                        relationship between <persName key="wegenerG">Gerda Wegener</persName> and
+                        me had to be put in order, from a purely legal point of view. I had the
+                        necessary reports from <persName key="warnekros">the <placeName
+                                key="dresden">Dresden</placeName> doctor</persName> with me, and
+                        thanks to his authority and the understanding of the Danish authorities I
+                        was able to settle the judicial formalities relatively quickly. My gender
+                        was changed in the church book and I got the right to my new name. . ."</p>
                     <p>"Did you get divorced too?"</p>
-                    <p>"No, the marriage between <persName key="wegenerE">Einar</persName> and <persName key="wegenerG">Gerda Wegener</persName> was declared invalid by a
-                        court judgment. So they are not divorced - they have never been
+                    <p>"No, the marriage between <persName key="wegenerE">Einar</persName> and
+                            <persName key="wegenerG">Gerda Wegener</persName> was declared invalid
+                        by a court judgment. So they are not divorced - they have never been
                         married."</p>
                     <p>"And what are your future plans?"</p>
-                    <p>"<persName key="wegenerG">Gerda Wegener</persName> is going to <placeName key="morocco">Morocco</placeName> soon, where she will be staying for a longer
-                        period of time to study. I'm going to <placeName key="paris">Paris</placeName> to sort things out, and I'm sure
-                        I'll visit her in <placeName key="morocco">Morocco</placeName>, where I've never been. . . What I do then - time
-                        will tell, for now I'm just happy to be allowed to be who I am", <persName key="lili">Lili Elbe</persName>
-                        concludes.</p>
+                    <p>"<persName key="wegenerG">Gerda</persName> is going to <placeName
+                            key="morocco">Morocco</placeName> soon, where she will be staying for a
+                        longer period of time to study. I'm going to <placeName key="paris"
+                            >Paris</placeName> to sort things out, and I'm sure I'll visit her in
+                            <placeName key="morocco">Morocco</placeName>, where I've never been. . .
+                        What I do then - time will tell, for now I'm just happy to be allowed to be
+                        who I am", <persName key="lili">Lili Elbe</persName> concludes.</p>
 
 
-                    <p><hi rend="bold"><persName key="wegenerG">Gerda Wegener</persName> says . . . </hi></p>
+                    <p>
+                        <hi rend="emphasis"><persName key="wegenerG">Gerda Wegener</persName> says .
+                            . . </hi>
+                    </p>
                     <!--not sure what to do here-->
-                    <p>Shaken, I ask <persName key="wegenerG">Gerda Wegener</persName> for her response to all of this. "I am glad that <persName key="lili">Lili</persName> has
-                        now become a happier person. I will never leave her. We are friends for
-                        life. And I am also the most qualified to help her, to guide her so that she
-                        can go her own way, this new, wonderful path."</p>
-                    <p><persName key="wegenerG">Gerda Wegener</persName> says nothing more, she smiles with her brave eyes that reveal nothing
-                        of the suffering she has experienced. . .<pb style="page" n="443"/>
-                        [Picture: The painter <persName key="wegenerG">Gerda Wegener</persName>, the former wife of <persName key="wegenerE">Einar Wegener</persName>
-                        (<placeName key="paris">Paris</placeName>, 1930)]</p>
-
-                    <p><hi rend="bold">The Doctor Reports . . .</hi></p>
+                    <p>Shaken, I ask <persName key="wegenerG">Gerda Wegener</persName> for her
+                        response to all of this. "I am glad that <persName key="lili"
+                            >Lili</persName> has now become a happier person. I will never leave
+                        her. We are friends for life. And I am also the most qualified to help her,
+                        to guide her so that she can go her own way, this new, wonderful path."</p>
+                    <p><persName key="wegenerG">Gerda Wegener</persName> says nothing more, she
+                        smiles with her brave eyes that reveal nothing of the suffering she has
+                        experienced. . .<figure
+                            facs="http://www.lilielbe.org/media/periodicals/1931-05-07ScherlMagazin_16.jpg">
+                            <figDesc>The painter <persName key="wegenerG">Gerda Wegener</persName>,
+                                the former wife of <persName key="wegenerE">Einar Wegener</persName>
+                                    (<placeName key="paris">Paris</placeName>, 1930)</figDesc>
+                        </figure></p>
+                    <pb style="page" n="443"/>
+                    <p>
+                        <hi rend="emphasis"><persName key="warnekros">The Doctor</persName> Reports
+                            . . .</hi>
+                    </p>
                     <!--not sure what to do here-->
 
-                    <p>"I will gladly tell you what I have to recount," says the doctor in
-                        <placeName key="dresden">Dresden</placeName>."I know the woman who is now called <persName key="lili">Lili Elbe</persName>, who used to be the
-                        painter <persName key="wegenerE">Einar Wegener</persName>, from a stay in <placeName key="paris">Paris</placeName>. At that time she was facing
+                    <p>"I will gladly tell you what I have to recount," says <persName
+                            key="warnekros">the doctor in <placeName key="dresden"
+                                >Dresden</placeName></persName>. "I know the woman who is now called
+                            <persName key="lili">Lili Elbe</persName>, who used to be the painter
+                            <persName key="wegenerE">Einar Wegener</persName>, from a stay in
+                            <placeName key="paris">Paris</placeName>. At that time she was facing
                         suicide. . . She couldn't find her way in life. Outstanding French doctors
                         could not help her; they took the stand that she could not be helped, that
                         she must find her own fate. Her family and friends urged me to at least
@@ -691,13 +929,16 @@
                         for me as I could not fall back on a similar case. But I thought the
                         opportunity was greater than the risk. Now afterwards I am proud to say that
                         the experiment went beyond all expectations.</p>
-                    <p>My patient agreed to come to me at the clinic in <placeName key="dresden">Dresden</placeName> and to be treated by
-                        me. Before that, tests had been carried out by two well-known <placeName key="berlin">Berlin</placeName>-based
-                        internists, one of whom had taken a blood test. I cannot comment on details.
-                        I can only say that the operation (there were several) was very complicated
-                        and not without risk. Among other things, a kind of rejuvenation cure was
-                        eventually undertaken in which the patient — she was in her early forties —
-                        received ovaries from a 26 year old woman.</p>
+                    <p><persName key="lili">My patient</persName> agreed to come to me at <placeName
+                            key="womensClinic">the clinic in <placeName key="dresden"
+                                >Dresden</placeName></placeName> and to be treated by me. Before
+                        that, tests had been carried out by two well-known <placeName key="berlin"
+                            >Berlin</placeName>-based internists, one of whom had taken a blood
+                        test. I cannot comment on details. I can only say that the operation (there
+                        were several) was very complicated and not without risk. Among other things,
+                        a kind of rejuvenation cure was eventually undertaken in which the patient —
+                        she was in her early forties — received ovaries from a 26 year old
+                        woman.</p>
                     <p>And after the operations were successful, the strange and wonderful thing
                         happened that her slumbering femininity suddenly awoke and began to unfold,
                         both mentally and physically. She is a perfectly normal woman now, and where
@@ -705,73 +946,109 @@
                         balance. Everything indicates that she still has many good years ahead of
                         her. . . And in that case this unauthorized intervention in the order of
                         nature is completely responsible and justifiable."</p>
-                    <p>[Picture: <persName key="lili">Lili Elbe</persName> (<persName key="wegenerE">Einar Wegener</persName> transformed into a woman) in the garden of
-                        the <placeName key="womensClinic">State Women's Clinic</placeName> in <placeName key="dresden">Dresden</placeName> (May 1930)]</p>
+                    <figure
+                            facs="http://www.lilielbe.org/media/periodicals/1931-05-07ScherlMagazin_11.jpg">
+                            <figDesc><hi rend="bold"><persName key="lili">Lili Elbe</persName>
+                                        (<persName key="wegenerE">Einar Wegener</persName>
+                                    transformed into a woman) in the garden of the <placeName
+                                        key="womensClinic">State Women's Clinic</placeName> in
+                                        <placeName key="dresden">Dresden</placeName> (May
+                                1930)</hi></figDesc>
+                        </figure>
                     <pb style="page" n="444"/>
-                    
-                    <p><hi rend="bold">JOURNEY THROUGH THE NIGHT</hi></p><!--not sure what to do with this-->
-                      <p><hi rend="bold">By <persName key="lili">Lili Elbe</persName></hi></p><!--not sure what to do with this-->
-                    <p><hi rend="italics"><persName key="lili">Lili Elbe</persName> wants to write from her soul all the hardship
-                            that she has experienced. Her book, which was published in late summer
-                            in German, will be the confession of a woman who lived and suffered all
-                            her life as the painter <persName key="wegenerE">Einar Wegener</persName>. We are now in a position to print
-                            a sample from this confession, an excerpt from one of the first
-                            chapters, which tells <persName key="wegenerE">Einar Wegener</persName>'s fateful journey from <placeName key="paris">Paris</placeName> to
-                            <placeName key="berlin">Berlin</placeName> and, in the deepest sense, is <persName key="wegenerE">Einar</persName>'s farewell to his previous
-                            form of being as a man: For the last time he meets a woman as a man, for
-                            the last time he is allowed to be a "knight" to the "weaker sex". -
-                            Because in <placeName key="berlin">Berlin</placeName> the question of his future way of life as a woman is
-                            decided.</hi></p>
-                    <p>The speed of the train increased slowly. <persName key="wegenerE">Einar</persName> sat sunk in his corner seat in
-                        the compartment - with empty eyes. The urban areas of <placeName key="paris">Paris</placeName>, which passed
-                        more quickly, dispersed, became houses with gardens, turned into fields with
-                        a few large, towering advertising signs. He smoked one cigarette after the
-                        other. A kind of sadness stirred in him, almost like remorse, and vanished
-                        again in the smoke of his cigarette.</p>
-                    <p><persName key="wegenerG">Gerda Wegener</persName> — <persName key="rossiniEl">Elena</persName> — these two dear friends, whom he above all had to thank that
-                        <placeName key="paris">Paris</placeName> felt like his home — <placeName key="paris">Paris</placeName> — had he actually seen <placeName key="paris">Paris</placeName> now that he
-                        was leaving? He hadn't even thought of leaning out the window and seeing the
-                        slender silhouette of the <placeName key="eiffel">Eiffel Tower</placeName> and the white dome of the <placeName key="sacreCoeur">Sacré-Cœur</placeName>
-                        for the last time, now before they faded forever on the horizon.</p>
-                    <p>Forever? Yes, it was forever for him! Because he, <persName key="wegenerE">Einar</persName>, he would never come
-                        back to <placeName key="paris">Paris</placeName>. Maybe <persName key="lili">Lili</persName>. . . But that was something completely different.
-                        He felt a pang in his heart.</p>
+
+                    <p>
+                        <hi rend="emphasis">JOURNEY THROUGH THE NIGHT</hi>
+                    </p>
+                    <!--not sure what to do with this-->
+                    <p>
+                        <hi rend="emphasis">By <persName key="lili">Lili Elbe</persName></hi>
+                    </p>
+                    <!--not sure what to do with this-->
+                    <p>
+                        <hi rend="italics"><persName key="lili">Lili Elbe</persName> wants to write
+                            from her soul all the hardship that she has experienced. Her book, which
+                            was published in late summer in German, will be the confession of a
+                            woman who lived and suffered all her life as the painter <persName
+                                key="wegenerE">Einar Wegener</persName>. We are now in a position to
+                            print a sample from this confession, an excerpt from one of the first
+                            chapters, which tells <persName key="wegenerE">Einar
+                            Wegener</persName>'s fateful journey from <placeName key="paris"
+                                >Paris</placeName> to <placeName key="berlin">Berlin</placeName>
+                            and, in the deepest sense, is <persName key="wegenerE"
+                            >Einar</persName>'s farewell to his previous form of being as a man: For
+                            the last time he meets a woman as a man, for the last time he is allowed
+                            to be a "knight" to the "weaker sex". - Because in <placeName
+                                key="berlin">Berlin</placeName> the question of his future way of
+                            life as a woman is decided.</hi>
+                    </p>
+                    <p>The speed of the train increased slowly. <persName key="wegenerE"
+                            >Einar</persName> sat sunk in his corner seat in the compartment - with
+                        empty eyes. The urban areas of <placeName key="paris">Paris</placeName>,
+                        which passed more quickly, dispersed, became houses with gardens, turned
+                        into fields with a few large, towering advertising signs. He smoked one
+                        cigarette after the other. A kind of sadness stirred in him, almost like
+                        remorse, and vanished again in the smoke of his cigarette.</p>
+                    <p><persName key="wegenerG">Gerda</persName> — <persName key="rossiniEl"
+                            >Elena</persName> — these two dear friends, whom he above all had to
+                        thank that <placeName key="paris">Paris</placeName> felt like his home —
+                            <placeName key="paris">Paris</placeName> — had he actually seen
+                            <placeName key="paris">Paris</placeName> now that he was leaving? He
+                        hadn't even thought of leaning out the window and seeing the slender
+                        silhouette of the <placeName key="eiffel">Eiffel Tower</placeName> and the
+                        white dome of the <placeName key="sacreCoeur">Sacré-Cœur</placeName> for the
+                        last time, now before they faded forever on the horizon.</p>
+                    <p>Forever? Yes, it was forever for him! Because he, <persName key="wegenerE"
+                            >Einar</persName>, he would never come back to <placeName key="paris"
+                            >Paris</placeName>. Maybe <persName key="lili">Lili</persName>. . . But
+                        that was something completely different. He felt a pang in his heart.</p>
                     <p>A bell rings in the corridor: "The first lunch service!"</p>
-                    <p>A general departure from the compartment. <persName key="wegenerE">Einar</persName> joined the stream of
-                        travelers to the dining car.</p>
+                    <p>A general departure from the compartment. <persName key="wegenerE"
+                            >Einar</persName> joined the stream of travelers to the dining car.</p>
                     <p>When he came back he stopped by a corridor window. The train sped in a
-                        rhythmical journey through <placeName key="franceNorthern">northern France</placeName>. . .</p>
-                    <p>Suddenly <persName key="wegenerE">Einar</persName> doubled over in pain; he had to hold on to the handle of the
-                        window. He looked helplessly at his watch. Was it really not more than 3?
-                        How time crept! . . . For a moment he bitterly regretted having prevented
-                        <persName key="wegenerG">Gerda Wegener</persName> from accompanying him. Then he pulled himself together again,
-                        straightened up, and lit a cigarette. To the left and right, fields and
-                        newly built towns rushed past, as well as war cemeteries. . . And again
-                        fields and again places, plains and hills. He saw nothing more at all. Only
-                        the customs border brought a little change into the endless afternoon.</p>
-                    <p>Then the train traveled snaillike through <placeName key="belgium">Belgium</placeName>. A new border had to be
-                        reached to rekindle the power of the locomotive. Now the train raced into
-                        <placeName key="germany">Germany</placeName> as the night settled on the land.</p>
-                    <p><persName key="wegenerE">Einar</persName> sat in his corner seat in the compartment. The pain had become so
-                        severe that he could no longer stand upright in the corridor. He closed his
-                        eyes. Perhaps it would have been much easier not to try this fantastic
-                        experiment. But then he remembered a letter to his doctor friend in
-                        <placeName key="dresden">Dresden</placeName>:"I will commit myself to you for life and death, if only <persName key="lili">Lili</persName> is
-                        allowed to live." Everything that was left of male pride stirred in him: "So
-                        I have to get to <placeName key="berlin">Berlin</placeName>," he said to himself.</p>
+                        rhythmical journey through <placeName key="franceNorthern">northern
+                            France</placeName>. . .</p>
+                    <p>Suddenly <persName key="wegenerE">Einar</persName> doubled over in pain; he
+                        had to hold on to the handle of the window. He looked helplessly at his
+                        watch. Was it really not more than 3? How time crept! . . . For a moment he
+                        bitterly regretted having prevented <persName key="wegenerG">Gerda
+                            Wegener</persName> from accompanying him. Then he pulled himself
+                        together again, straightened up, and lit a cigarette. To the left and right,
+                        fields and newly built towns rushed past, as well as war cemeteries. . . And
+                        again fields and again places, plains and hills. He saw nothing more at all.
+                        Only the customs border brought a little change into the endless
+                        afternoon.</p>
+                    <p>Then the train traveled snaillike through <placeName key="belgium"
+                            >Belgium</placeName>. A new border had to be reached to rekindle the
+                        power of the locomotive. Now the train raced into <placeName key="germany"
+                            >Germany</placeName> as the night settled on the land.</p>
+                    <p><persName key="wegenerE">Einar</persName> sat in his corner seat in the
+                        compartment. The pain had become so severe that he could no longer stand
+                        upright in the corridor. He closed his eyes. Perhaps it would have been much
+                        easier not to try this fantastic experiment. But then he remembered a letter
+                        to <persName key="warnekros">his doctor friend in <placeName key="dresden"
+                                >Dresden</placeName></persName>:"I will commit myself to you for
+                        life and death, if only <persName key="lili">Lili</persName> is allowed to
+                        live." Everything that was left of male pride stirred in him: "So I have to
+                        get to <placeName key="berlin">Berlin</placeName>," he said to himself.</p>
                     <p>He tried to give his thoughts a different direction in order to dampen his
                         increasing nervousness, he remembered a meeting with a"colleague" at the
-                        "<placeName key="stroget">Strög</placeName>" in <placeName key="copenhagen">Copenhagen</placeName> when he was holding an exhibition there: "Now I want
-                        to give you my honest opinion, dear <persName key="wegenerE">Wegener</persName>." -"Better not, dear fellow",
-                        <persName key="wegenerE">Einar</persName> had quickly cut him off,"you know,<pb style="page" n="445"/> I'm
-                        a good boxer!" And the"colleague" had suddenly shrunk away silently, like a
-                        pig's bladder into which a hole had been punched.</p>
-                    <p><persName key="wegenerE">Einar</persName> quietly shook with laughter at this memory, - but with that the pain
-                        awoke again, and he again felt the lurching of the car, the bumping of the
-                        wheels and, like the stabbing of a dagger, every vibration of the train.</p>
-                    <p>When the compartment emptied in <placeName key="cologne">Cologne</placeName>, where the sleeping cars were
-                        attached--because the other travelers had reserved sleeping places--he felt
-                        the emptiness around him as a relief. Now he was finally alone.</p>
+                            "<placeName key="stroget">Strög</placeName>" in <placeName
+                            key="copenhagen">Copenhagen</placeName> when he was holding an
+                        exhibition there: "Now I want to give you my honest opinion, dear <persName
+                            key="wegenerE">Wegener</persName>." -"Better not, dear fellow",
+                            <persName key="wegenerE">Einar</persName> had quickly cut him off,"you
+                            know,<pb style="page" n="445"/> I'm a good boxer!" And the"colleague"
+                        had suddenly shrunk away silently, like a pig's bladder into which a hole
+                        had been punched.</p>
+                    <p><persName key="wegenerE">Einar</persName> quietly shook with laughter at this
+                        memory, - but with that the pain awoke again, and he again felt the lurching
+                        of the car, the bumping of the wheels and, like the stabbing of a dagger,
+                        every vibration of the train.</p>
+                    <p>When the compartment emptied in <placeName key="cologne">Cologne</placeName>,
+                        where the sleeping cars were attached--because the other travelers had
+                        reserved sleeping places--he felt the emptiness around him as a relief. Now
+                        he was finally alone.</p>
                     <p>He got up, strolled back and forth, stretched and yawned, actually he was
                         sleepy. When he lit a cigarette, he was overtaken by a new wave of pain. And
                         this time the seizure was so severe that he sank down on the cushion of the
@@ -797,55 +1074,69 @@
                         windows. Exhausted, he fell down on his seat and pulled his coat over
                         himself up to his ears.</p>
                     <p>Did he have a high fever? Was he starting to hallucinate? He could feel
-                        [Picture: A Work by the painter <persName key="wegenerE">Einar Wegener</persName>: A Summer in <placeName key="franceSouth">Southern France</placeName>]
-                        how all the color drained from his face. . . his teeth chattered. . . how
-                        cold it was in the compartment. He was shivering with cold, and cold sweat
-                        poured from his temples. . .</p>
-                    <p>The train slowed down, finally stopped at a station. "<placeName key="hanover">Hanover</placeName>, <placeName key="hanover">Hanover</placeName>" - and
-                        again "<placeName key="hanover">Hanover</placeName>" he heard. Hammer blows against the wagon wheels. Noise
-                        outside his window. Voices — everything as if muffled by a cotton curtain.
-                        Doors were slammed. The engine started again, the train groaned and slowly
-                        started again.</p>
-                    <p>Suddenly <persName key="wegenerE">Einar</persName> jumped up. The door of his compartment was thrown open. A
-                        woman's silhouette showed in the opening against the light from the
-                        corridor. For a moment she hesitated because of the darkness of the
-                        compartment - then she put a suitcase in the luggage rack and, exhausted,
-                        dropped into the corner across from <persName key="wegenerE">Einar</persName>.</p>
+                            <figure
+                            facs="http://www.lilielbe.org/media/periodicals/1931-05-07ScherlMagazin_12.jpg">
+                            <figDesc><hi rend="bold">A Work by the painter <persName key="wegenerE"
+                                        >Einar Wegener</persName>: A Summer in <placeName
+                                        key="franceSouth">Southern France</placeName></hi></figDesc>
+                        </figure> how all the color drained from his face. . . his teeth chattered.
+                        . . how cold it was in the compartment. He was shivering with cold, and cold
+                        sweat poured from his temples. . .</p>
+                    <p>The train slowed down, finally stopped at a station. "<placeName
+                            key="hanover">Hanover</placeName>, <placeName key="hanover"
+                            >Hanover</placeName>" - and again "<placeName key="hanover"
+                            >Hanover</placeName>" he heard. Hammer blows against the wagon wheels.
+                        Noise outside his window. Voices — everything as if muffled by a cotton
+                        curtain. Doors were slammed. The engine started again, the train groaned and
+                        slowly started again.</p>
+                    <p>Suddenly <persName key="wegenerE">Einar</persName> jumped up. The door of his
+                        compartment was thrown open. A woman's silhouette showed in the opening
+                        against the light from the corridor. For a moment she hesitated because of
+                        the darkness of the compartment - then she put a suitcase in the luggage
+                        rack and, exhausted, dropped into the corner across from <persName
+                            key="wegenerE">Einar</persName>.</p>
                     <p>He turned on the light.</p>
-                    <p>Somewhat annoyed, he scrutinized <persName key="bride">the woman</persName> who had suddenly put an end to his
-                        loneliness. So now he was forced to sit with her all the way to <placeName key="berlin">Berlin</placeName> since
-                        the train had no more stops before then. But he pulled himself together and
+                    <p>Somewhat annoyed, he scrutinized <persName key="bride">the woman</persName>
+                        who had suddenly put an end to his loneliness. So now he was forced to sit
+                        with her all the way to <placeName key="berlin">Berlin</placeName> since the
+                        train had no more stops before then. But he pulled himself together and
                         pretended that nothing had happened. For there was still enough man in him
                         that he did not want the sympathy from strangers.</p>
                     <pb style="page" n="446"/>
                     <p>She was young and quite elegant, by the way - but her wide-open eyes had a
                         blank expression. She looked like she was staring through the walls at
-                        something distant that was petrifying her. <persName key="wegenerE">Einar</persName> felt a dire, strange
-                        unease.</p>
+                        something distant that was petrifying her. <persName key="wegenerE"
+                            >Einar</persName> felt a dire, strange unease.</p>
                     <p>The heat in the compartment was unbearable. He felt a terrible dryness in his
                         throat. He didn't understand why it had suddenly become so warm. Shortly
                         before, his teeth had chattered from the cold. . .</p>
                     <p>And again the train chased past a station with a devilish noise, and the
                         platform lights dazzled through the car window. . . He jumped up and pulled
                         the curtains back.</p>
-                    <p>Now <persName key="bride">the stranger</persName> was crying! Tears fell on her pale face and she made not the
-                        least effort to hide her crying or to wipe the tears. Hadn't she seen him
-                        sitting across from her? Women are strange. But were they so different from
-                        men? Didn't they have any pride? Were they so weak?</p>
-                    <p><persName key="lili">Lili</persName> - would she be like that too? Yes - actually she had always been like
-                        that too. . .</p>
-                    <p>Compassion suddenly seized him for the suffering of <persName key="bride">this unknown young woman</persName>.</p>
+                    <p>Now <persName key="bride">the stranger</persName> was crying! Tears fell on
+                        her pale face and she made not the least effort to hide her crying or to
+                        wipe the tears. Hadn't she seen him sitting across from her? Women are
+                        strange. But were they so different from men? Didn't they have any pride?
+                        Were they so weak?</p>
+                    <p><persName key="lili">Lili</persName> - would she be like that too? Yes -
+                        actually she had always been like that too. . .</p>
+                    <p>Compassion suddenly seized him for the suffering of <persName key="bride"
+                            >this unknown young woman</persName>.</p>
                     <p>"Mademoiselle," he began quietly. . .</p>
-                    <p>She did not seem to hear him. Then he remembered that he was in <placeName key="germany">Germany</placeName>.</p>
+                    <p>She did not seem to hear him. Then he remembered that he was in <placeName
+                            key="germany">Germany</placeName>.</p>
                     <p>"Young lady," he tried again, almost embarrassed. . .</p>
-                    <p>Then she raised her weeping eyes and saw a sympathetic smile on <persName key="wegenerE">Einar</persName>'s face.
-                        That was what she needed at that moment. A few minutes later he knew the
-                        reason for her despair: <persName key="pianistXX">her fiancé, a well-known musician</persName>, had recently gone
-                        to <placeName key="berlin">Berlin</placeName> to give a few concerts. She had already expected him back and was
-                        looking forward to seeing him again. Then she happened to read in a
-                        newspaper that evening that he had been seriously injured in an automobile
-                        collision and was now in a <placeName key="berlin">Berlin</placeName> clinic. <persName key="wegenerE">Einar</persName> read this terrible report in
-                        the crumpled newspaper she held out to him. . .</p>
+                    <p>Then she raised her weeping eyes and saw a sympathetic smile on <persName
+                            key="wegenerE">Einar</persName>'s face. That was what she needed at that
+                        moment. A few minutes later he knew the reason for her despair: <persName
+                            key="pianistXX">her fiancé, a well-known musician</persName>, had
+                        recently gone to <placeName key="berlin">Berlin</placeName> to give a few
+                        concerts. She had already expected him back and was looking forward to
+                        seeing him again. Then she happened to read in a newspaper that evening that
+                        he had been seriously injured in an automobile collision and was now in a
+                            <placeName key="berlin">Berlin</placeName> clinic. <persName
+                            key="wegenerE">Einar</persName> read this terrible report in the
+                        crumpled newspaper she held out to him. . .</p>
                     <p>What could he do for her? He had always had a certain mystical power to calm
                         pain in others. Did he still have enough strength on that eerie night to
                         give this tormented woman's heart some rest? He arduously searched his
@@ -858,27 +1149,38 @@
                         began to whimper in sleep like a sick child. He closed his eyes and now
                         tried to sleep too. The regular, driving rhythm of the train cradled them
                         both. How strange life was! Richer in surprises than any novel in the world.
-                        Here he was now, <persName key="wegenerE">Einar Wegener</persName>, the painter from <placeName key="paris">Paris</placeName>, with <persName key="bride">a completely unknown young German woman</persName> who slept in his arms as each of them rode toward
-                        their own fate - somewhere in <placeName key="germany">Germany</placeName>. . .</p>
+                        Here he was now, <persName key="wegenerE">Einar Wegener</persName>, the
+                        painter from <placeName key="paris">Paris</placeName>, with <persName
+                            key="bride">a completely unknown young German woman</persName> who slept
+                        in his arms as each of them rode toward their own fate - somewhere in
+                            <placeName key="germany">Germany</placeName>. . .</p>
                     <p>He sat there half asleep, for how long he did not know. Then a dagger-like
                         pain shot through his body, and he was forced to change his position.</p>
                     <p>She woke with horror in her eyes, and her tears streamed again.</p>
                     <p>He had to start over. With the exertion of all his will, while his own pains
-                        raged within him, he managed to lull <persName key="bride">the strange travel companion</persName> to sleep.
-                        Strange - no, he did not really feel that way now. Had she not been sent to
-                        him so that he could forget himself on this endless night, perhaps so that
-                        he could do a good deed, now, at the end? Was <persName key="bride">this small German girl</persName>, who
-                        here on his chest lay sleeping, not the last girl that on
-                        his--<persName key="wegenerE">Einar</persName>’s--chest lay, was it not in the deepest sense, a farewell to
-                        others. . . was it not the last meeting of man and woman? . . .</p>
-                    <p>A gray, cold morning light seeped through the curtains. <persName key="wegenerE">Einar</persName> carefully
-                        pulled them aside, and <placeName key="berlin">Berlin</placeName>'s suburbs glided quickly by.</p>
-                    <p>When <persName key="bride">his traveling companion</persName> woke up with a cry of fear, he took her hands
-                        and with a mystical conviction he said:"Just be calm, he is not dead! I
-                        myself was close to death this night, but now that we have both reached our
-                        goal, I feel certain, that he and I, that we both will live."</p>
-                    <p>She looked at him wordlessly as the train rolled into <placeName><placeName key="friedrichsstrasse">Friedrichstrasse</placeName> station</placeName>. And when she said goodbye to him, he saw hope in her tearful eyes,
-                        and he felt with certainty that this hope would not be shattered.</p>
+                        raged within him, he managed to lull <persName key="bride">the strange
+                            travel companion</persName> to sleep. Strange - no, he did not really
+                        feel that way now. Had she not been sent to him so that he could forget
+                        himself on this endless night, perhaps so that he could do a good deed, now,
+                        at the end? Was <persName key="bride">this small German girl</persName>, who
+                        here on his chest lay sleeping, not the last girl that on his--<persName
+                            key="wegenerE">Einar</persName>’s--chest lay, was it not in the deepest
+                        sense, a farewell to others. . . was it not the last meeting of man and
+                        woman? . . .</p>
+                    <p>A gray, cold morning light seeped through the curtains. <persName
+                            key="wegenerE">Einar</persName> carefully pulled them aside, and
+                            <placeName key="berlin">Berlin</placeName>'s suburbs glided quickly
+                        by.</p>
+                    <p>When <persName key="bride">his traveling companion</persName> woke up with a
+                        cry of fear, he took her hands and with a mystical conviction he said:"Just
+                        be calm, he is not dead! I myself was close to death this night, but now
+                        that we have both reached our goal, I feel certain, that he and I, that we
+                        both will live."</p>
+                    <p>She looked at him wordlessly as the train rolled into <placeName><placeName
+                                key="friedrichsstrasse">Friedrichstrasse</placeName>
+                            station</placeName>. And when she said goodbye to him, he saw hope in
+                        her tearful eyes, and he felt with certainty that this hope would not be
+                        shattered.</p>
                 </div>
             </div>
         </body>
